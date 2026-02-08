@@ -1,0 +1,172 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+
+    /* Primary Theme Gradient (Saffron -> Deep Red -> Maroon) */
+    background: linear-gradient(135deg, #ff9933 0%, #ff5500 50%, #800000 100%);
+
+    /* Temple/Infinity Pattern Overlay */
+    /* Using radial gradients to simulate a subtle mandala/dot pattern */
+    background-image:
+        radial-gradient(circle at 100% 100%, rgba(255, 215, 0, 0.15) 10%, transparent 11%),
+        radial-gradient(circle at 0% 0%, rgba(255, 215, 0, 0.15) 10%, transparent 11%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 2px, transparent 2.5px);
+    background-size: 100% 100%, 100% 100%, 20px 20px;
+    background-repeat: no-repeat, no-repeat, repeat;
+
+    /* Border & Shadow */
+    border-bottom: 2px solid #ffd700;
+    /* Gold Border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mirror/Glass Effect Overlay at Bottom */
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    /* Lower part reflection */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
+    pointer-events: none;
+    backdrop-filter: blur(2px);
+    z-index: 0;
+}
+
+/* Logo Section */
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1;
+    /* Above the overlay */
+}
+
+.logoText {
+    font-family: var(--font-cinzel), serif;
+    /* Or a suitable serif */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #ffd700, #ffec8b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Links */
+.navLinks {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    z-index: 1;
+}
+
+.navItem {
+    position: relative;
+}
+
+.navLink {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    font-family: var(--font-playfair), serif;
+    /* Fallback, maybe import a Google Font */
+}
+
+.navLink:hover {
+    color: #ffd700;
+    /* Gold on hover */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+/* Infinity Hover Effect Underline */
+.navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0px;
+    left: 50%;
+    background-color: #ffd700;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+/* Call to Action Button (Donate) */
+.donateBtn {
+    background: linear-gradient(45deg, #ffd700, #ffcc00);
+    color: #800000;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 1;
+    font-family: sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.donateBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    background: linear-gradient(45deg, #ffcc00, #e6b800);
+}
+
+/* Mobile Menu Icon */
+.menuIcon {
+    display: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navLinks {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: linear-gradient(135deg, #ff5500, #800000);
+        padding: 2rem;
+        gap: 1.5rem;
+        align-items: center;
+        clip-path: circle(0% at 100% 0);
+        transition: clip-path 0.5s ease-in-out;
+    }
+
+    .navLinks.active {
+        clip-path: circle(150% at 100% 0);
+    }
+
+    .menuIcon {
+        display: block;
+    }
+}
