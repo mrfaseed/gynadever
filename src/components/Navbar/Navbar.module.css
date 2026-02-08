@@ -1,9 +1,10 @@
 /* Navbar Container */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
+    /* Centering everything primarily */
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -49,18 +50,20 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    z-index: 1;
-    /* Above the overlay */
+    z-index: 10;
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .logoText {
-    font-family: var(--font-cinzel), serif;
+    font-family: var(--font-roboto-flex), sans-serif;
     /* Or a suitable serif */
     font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: -2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     background: linear-gradient(to bottom, #ffd700, #ffec8b);
     background-clip: text;
@@ -74,6 +77,10 @@
     gap: 2rem;
     list-style: none;
     z-index: 1;
+    align-items: center;
+    /* Ensure items inside are vertically centered */
+    margin: 0;
+    /* Remove default ul margin */
 }
 
 .navItem {
@@ -81,15 +88,18 @@
 }
 
 .navLink {
+    padding: 0.5rem 1rem;
+    /* Balanced Padding */
     color: #fff;
     font-size: 1.1rem;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: -1px;
     transition: color 0.3s ease;
-    padding: 0.5rem 0;
-    font-family: var(--font-playfair), serif;
+    font-family: var(--font-roboto-flex), sans-serif;
     /* Fallback, maybe import a Google Font */
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .navLink:hover {

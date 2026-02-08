@@ -4,10 +4,17 @@
     background-color: #0a0a1a;
     /* Very Dark Navy */
     color: #e0e0e0;
-    padding: 6rem 2rem 2rem;
+    padding: 3rem 1rem 1rem;
+    /* Reduced padding */
     overflow: hidden;
-    font-family: var(--font-playfair), serif;
+    font-family: var(--font-roboto-flex), sans-serif;
     border-top: 5px solid #d4af37;
+    min-height: 40vh;
+    /* Scaled down from 70vh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically instead of spaced out */
 }
 
 /* Mandala Animation Keyframes */
@@ -70,18 +77,25 @@
     color: #d4af37;
     font-size: 2rem;
     font-weight: bold;
-    font-family: var(--font-cinzel), serif;
+    font-family: var(--font-roboto-flex), sans-serif;
 }
 
 /* Content Layout */
 .content {
     position: relative;
     z-index: 1;
-    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    /* Reduced width */
+    width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    /* Reduced gap */
+    align-items: start;
+    align-content: center;
 }
 
 /* Column Styling */
@@ -91,15 +105,53 @@
     gap: 1.5rem;
 }
 
+/* Center the content of the middle column (Quick Links) */
+.content> :nth-child(2) {
+    align-items: center;
+    text-align: center;
+}
+
+.content> :nth-child(2) .title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content> :nth-child(2) .links {
+    align-items: center;
+}
+
 .title {
-    font-family: var(--font-cinzel), serif;
+    font-family: var(--font-roboto-flex), sans-serif;
     font-size: 1.5rem;
-    color: #d4af37;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: -1px;
     position: relative;
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
+
+    /* Gold Gradient & Shine Effect */
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 2px rgba(189, 150, 60, 0.3);
+    font-weight: 700;
+    background-size: 200% auto;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .title::after {
@@ -221,8 +273,9 @@
 /* Bottom Bar */
 .bottomBar {
     border-top: 1px solid rgba(212, 175, 55, 0.2);
-    margin-top: 4rem;
-    padding-top: 2rem;
+    margin-top: 2rem;
+    /* Reduced space */
+    padding-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,0 +1,38 @@
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    /* Changed from black to white */
+}
+
+.backgroundWrapper {
+    position: absolute;
+    width: 100vmin;
+    /* Responsive square */
+    height: 100vmin;
+    animation: spin 60s linear infinite;
+}
+
+.backgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0.8;
+    /* Adjust as needed */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

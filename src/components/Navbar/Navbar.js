@@ -15,11 +15,11 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
         {/* You can replace this text with an SVG or Image logo if available */}
-        <span className={styles.logoText}>GYNADEVER</span> 
+        <span className={styles.logoText}>Gynadever Maharaj</span>
       </div>
 
       <div className={styles.menuIcon} onClick={toggleMenu}>
-        {isOpen ? '✕' : '☰'} 
+        {isOpen ? '✕' : '☰'}
       </div>
 
       <ul className={`${styles.navLinks} ${isOpen ? styles.active : ''}`}>
@@ -39,17 +39,9 @@ export default function Navbar() {
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href="/events" className={styles.navLink} onClick={() => setIsOpen(false)}>
-            Events
-          </Link>
-        </li>
-        <li className={styles.navItem}>
           <Link href="/contact" className={styles.navLink} onClick={() => setIsOpen(false)}>
             Contact
           </Link>
-        </li>
-        <li className={styles.navItem}>
-          <button className={styles.donateBtn}>Donate</button>
         </li>
       </ul>
     </nav>

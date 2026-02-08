@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Cinzel, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Cinzel, Playfair_Display, Roboto_Flex } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar/Navbar";
 
@@ -26,6 +26,13 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+// Using Roboto Flex as a substitute for "Google Sans Flex" which is proprietary
+const robotoFlex = Roboto_Flex({
+  variable: "--font-roboto-flex",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata = {
   title: "Hinduism Organization",
   description: "Dedicated to the preservation and promotion of Sanatana Dharma",
@@ -34,7 +41,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${cinzel.variable} ${playfair.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${cinzel.variable} ${playfair.variable} ${robotoFlex.variable}`}>
         <Navbar />
         {children}
         <Footer />

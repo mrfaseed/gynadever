@@ -32,8 +32,6 @@ export default function Footer() {
                         <li><Link href="/" className={styles.link}>Home</Link></li>
                         <li><Link href="/about" className={styles.link}>About Us</Link></li>
                         <li><Link href="/temples" className={styles.link}>Temples & Ashrams</Link></li>
-                        <li><Link href="/events" className={styles.link}>Upcoming Events</Link></li>
-                        <li><Link href="/donate" className={styles.link}>Donate / Support</Link></li>
                         <li><Link href="/contact" className={styles.link}>Contact Us</Link></li>
                     </ul>
                 </div>
@@ -70,23 +68,6 @@ export default function Footer() {
                 </div>
 
                 {/* Column 4: Newsletter & Social */}
-                <div className={styles.column}>
-                    <h3 className={styles.title}>Newsletter</h3>
-                    <p style={{ color: '#ccc' }}>Subscribe to receive updates on spiritual events and daily wisdom.</p>
-
-                    <form className={styles.inputGroup} onSubmit={(e) => e.preventDefault()}>
-                        <input type="email" placeholder="Your Email Address" className={styles.input} />
-                        <button type="submit" className={styles.subscribeBtn}>➤</button>
-                    </form>
-
-                    <h4 style={{ marginTop: '2rem', color: '#d4af37', fontFamily: 'var(--font-cinzel)' }}>Follow Us</h4>
-                    <div className={styles.socialIcons}>
-                        <div className={styles.socialIcon}>FB</div>
-                        <div className={styles.socialIcon}>IG</div>
-                        <div className={styles.socialIcon}>YT</div>
-                        <div className={styles.socialIcon}>TW</div>
-                    </div>
-                </div>
             </div>
 
             {/* Bottom Bar */}
