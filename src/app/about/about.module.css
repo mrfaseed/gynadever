@@ -1,0 +1,444 @@
+/* Main Container */
+.container {
+    min-height: 100vh;
+    background-color: #fdf5e6;
+    /* Old Lace / Parchment color */
+    color: #4a0404;
+    /* Deep Maroon Text */
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/spiritual_hero.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax effect */
+    text-align: center;
+    color: #fff;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(74, 4, 4, 0.7));
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.title {
+    font-family: var(--font-cinzel), serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
+    background: linear-gradient(to bottom, #ffd700, #ffec8b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Content Sections */
+.section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+    opacity: 0;
+    animation: fadeInOnScroll 1s forwards;
+    /* Needs JS or simple delay */
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+/* Dedication Section */
+.dedicationText {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #ff9933;
+}
+
+.dedicationImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.sageImage {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ffd700;
+    transition: transform 0.3s ease;
+}
+
+.sageImage:hover {
+    transform: scale(1.02);
+}
+
+/* 3D Book Design */
+.bookWrapper {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.book3D {
+    width: 280px;
+    /* Slightly wider */
+    height: 380px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(-25deg);
+    transition: transform 0.5s ease;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
+    background: #3e2723;
+    /* Darker leather color */
+    border-radius: 4px 12px 12px 4px;
+}
+
+.book3D:hover {
+    transform: rotateY(0deg) scale(1.05);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* The Image as the Cover */
+.bookCoverImage {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    /* Ensure the user image covers fully */
+    border-radius: 0 12px 12px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* Fancy Old Border Effect on Cover */
+    border: 5px solid #d4af37;
+    /* Thicker gold border */
+    border-left: 10px solid #2d1b18;
+    /* Spine connection */
+    filter: sepia(0.2);
+    /* Slight vintage tone */
+}
+
+/* Book Pages / Thickness illusion */
+.book3D::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 100%;
+    /* Right side */
+    width: 40px;
+    height: 96%;
+    /* Slightly shorter */
+    background: repeating-linear-gradient(90deg,
+            #fff,
+            #f0f0f0 2px,
+            #ddd 4px);
+    transform: rotateY(90deg) translateX(-20px);
+    /* Adjust based on width */
+    transform-origin: left;
+    z-index: 1;
+    border: 1px solid #ccc;
+}
+
+/* Spine illusion (left side) */
+.book3D::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(to right, #4a0404, #800000, #4a0404);
+    transform: rotateY(-90deg) translateX(-15px);
+    transform-origin: left;
+}
+
+/* Biography Section */
+.bioSection {
+    background: linear-gradient(135deg, #fff8e7, #fff0db);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Temple Pattern Background Overlay */
+.bioSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#ff9933 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.sectionTitle {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-cinzel), serif;
+    font-size: 2.5rem;
+    color: #800000;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.sectionTitle::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #ffd700;
+    margin: 10px auto;
+}
+
+.bioContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    z-index: 1;
+}
+
+.infoCard {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #800000;
+    transition: transform 0.2s;
+}
+
+.infoCard:hover {
+    transform: translateX(5px);
+}
+
+.infoTitle {
+    font-weight: bold;
+    color: #ff5500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Literature Section (Books) */
+.literatureSection {
+    background-color: #4a0404;
+    color: #fff;
+    position: relative;
+}
+
+.bookContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Image on right */
+    gap: 3rem;
+    align-items: center;
+}
+
+.bookImageWrapper {
+    flex: 1;
+    position: relative;
+}
+
+.bookImage {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    border: 2px solid #ffd700;
+}
+
+.bookContent {
+    flex: 1;
+}
+
+.bookTitle {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+    font-family: var(--font-cinzel);
+}
+
+.bookDesc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+}
+
+.addressBox {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    margin-top: 2rem;
+}
+
+.addressTitle {
+    color: #ffd700;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Downloads Section */
+.downloadSection {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.downloadBtn {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff9933, #ff5500);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.downloadBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 85, 0, 0.4);
+}
+
+/* Philosophy Quote Section */
+.quoteSection {
+    background-image: url('/spiritual_hero.png');
+    /* Reuse hero bg or a dark variant */
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.quoteOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark overlay */
+    z-index: 1;
+}
+
+.quoteContent {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quoteText {
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 2;
+    font-family: var(--font-playfair), serif;
+    color: #fdf5e6;
+}
+
+.nirvana {
+    font-size: 3rem;
+    color: #ffd700;
+    margin: 2rem 0;
+    display: block;
+    font-family: var(--font-cinzel);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ffd700;
+    }
+
+    to {
+        text-shadow: 0 0 20px #ff9933, 0 0 10px #ff5500;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+    .section,
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .bookContainer,
+    .section {
+        flex-direction: column;
+    }
+
+    .dedicationImage,
+    .bookImageWrapper {
+        order: -1;
+        /* Image first on mobile */
+        margin-bottom: 2rem;
+    }
+}

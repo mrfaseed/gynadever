@@ -1,0 +1,285 @@
+/* Main Footer Container */
+.footer {
+    position: relative;
+    background-color: #0a0a1a;
+    /* Very Dark Navy */
+    color: #e0e0e0;
+    padding: 6rem 2rem 2rem;
+    overflow: hidden;
+    font-family: var(--font-playfair), serif;
+    border-top: 5px solid #d4af37;
+}
+
+/* Mandala Animation Keyframes */
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Mandala Pattern Overlay (Animated Image) */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Center the mandala */
+    width: 1200px;
+    /* Large size to cover background or act as centerpiece */
+    height: 1200px;
+    background-image: url('/mandala_pattern.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.15;
+    /* Subtle visibility */
+    z-index: 0;
+    pointer-events: none;
+
+    /* Animation */
+    animation: spin 60s linear infinite;
+    /* Slow, continuous rotation */
+
+    /* Blending for better integration with dark bg */
+    mix-blend-mode: screen;
+}
+
+/* Top Decorative Border (Mandala Style) */
+.decorativeTop {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 50px;
+    background-color: #0a0a1a;
+    border: 3px solid #d4af37;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.omSymbol {
+    color: #d4af37;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--font-cinzel), serif;
+}
+
+/* Content Layout */
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* Column Styling */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.title {
+    font-family: var(--font-cinzel), serif;
+    font-size: 1.5rem;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, #d4af37, transparent);
+}
+
+/* Links List */
+.links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.link {
+    color: #bdbdbd;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.link:hover {
+    color: #d4af37;
+    padding-left: 5px;
+}
+
+.link::before {
+    content: "✦";
+    font-size: 0.8rem;
+    color: #d4af37;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.link:hover::before {
+    opacity: 1;
+}
+
+/* Contact Info */
+.contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.icon {
+    color: #d4af37;
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+/* Quote Section */
+.quoteBox {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    font-style: italic;
+    text-align: center;
+}
+
+.sanskrit {
+    display: block;
+    color: #d4af37;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Newsletter Input */
+.inputGroup {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.input {
+    flex: 1;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #d4af37;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.subscribeBtn {
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(45deg, #d4af37, #b8860b);
+    border: none;
+    color: #0a0a1a;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.subscribeBtn:hover {
+    filter: brightness(1.1);
+}
+
+/* Bottom Bar */
+.bottomBar {
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    margin-top: 4rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialIcon {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #d4af37;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d4af37;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.socialIcon:hover {
+    background: #d4af37;
+    color: #0a0a1a;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .link {
+        justify-content: center;
+    }
+
+    .contactItem {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottomBar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
