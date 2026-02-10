@@ -1,0 +1,162 @@
+/* Main Container - Pure White */
+.container {
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1rem;
+}
+
+/* Canvas for Particles */
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Glass Card - Light Theme */
+.card {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 4rem;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Typography */
+.title {
+    font-family: "Google Sans", sans-serif;
+    font-size: 3.5rem;
+    color: #1a1a1a;
+    background: linear-gradient(to right, #b8860b, #d4af37, #cd853f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    background-size: 200% auto;
+    animation: gradientAnimation 3s ease-in-out infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.subtitle {
+    font-family: "Google Sans", sans-serif;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+    font-weight: 600;
+}
+
+.tamilText {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #d4af37;
+    /* Gold */
+    font-weight: 400;
+}
+
+.address {
+    font-family: "Google Sans", sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-top: 1rem;
+}
+
+/* Decorative Icon/Divider */
+.divider {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    margin: 1.5rem 0;
+}
+
+
+
+/* Contact Details Grid */
+.detailsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 2rem;
+}
+
+.detailItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+}
+
+.label {
+    font-family: var(--font-cinzel), serif;
+    font-size: 0.9rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.value {
+    font-family: var(--font-roboto-flex), sans-serif;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .tamilText {
+        font-size: 1.2rem;
+    }
+}

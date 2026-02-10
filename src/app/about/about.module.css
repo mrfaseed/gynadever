@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=BBH+Hegarty&family=Baloo+Thambi+2:wght@400..800&family=Bebas+Neue&family=Changa+One:ital@0;1&family=Damion&family=Figtree:ital,wght@0,300..900;1,300..900&family=Geom:ital,wght@0,300..900;1,300..900&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Momo+Signature&family=Momo+Trust+Display&family=Notable&family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sekuya&family=Syncopate:wght@400;700&display=swap');
+
 /* Main Container */
 .container {
     min-height: 100vh;
-    background-color: #fdf5e6;
+    background-color: #ffffff;
     /* Old Lace / Parchment color */
     color: #4a0404;
     /* Deep Maroon Text */
@@ -44,7 +46,7 @@
 .title {
     font-family: var(--font-cinzel), serif;
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
     background: linear-gradient(to bottom, #ffd700, #ffec8b);
@@ -57,7 +59,7 @@
     font-size: 1.5rem;
     color: #ffd700;
     margin-top: 1rem;
-    letter-spacing: 1px;
+    letter-spacing: -1px;
 }
 
 /* Content Sections */
@@ -82,7 +84,7 @@
     font-size: 1.2rem;
     line-height: 1.8;
     text-align: justify;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgb(255, 255, 255);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -214,11 +216,13 @@
     width: 100%;
     text-align: center;
     font-family: var(--font-cinzel), serif;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: #800000;
     margin-bottom: 2rem;
     position: relative;
     z-index: 1;
+    letter-spacing: -1px;
+
 }
 
 .sectionTitle::after {
@@ -261,6 +265,8 @@
 
 /* Literature Section (Books) */
 .literatureSection {
+    border-radius: 10px;
+    padding-top: 2rem;
     background-color: #4a0404;
     color: #fff;
     position: relative;
@@ -291,6 +297,7 @@
 }
 
 .bookTitle {
+    letter-spacing: -1px;
     font-size: 2rem;
     color: #ffd700;
     margin-bottom: 1rem;
@@ -313,9 +320,16 @@
 }
 
 .addressTitle {
+    font-size: 1.3rem;
+    font-family: "Google Sans", sans-serif;
     color: #ffd700;
     font-weight: bold;
     margin-bottom: 0.5rem;
+}
+
+.addressBox p {
+    font-family: "Google Sans", sans-serif;
+    font-size: 1.1rem;
 }
 
 /* Downloads Section */
@@ -325,6 +339,7 @@
 }
 
 .downloadBtn {
+    font-family: "Google sans", sans-serif;
     display: inline-block;
     background: linear-gradient(45deg, #ff9933, #ff5500);
     color: #fff;
@@ -381,13 +396,13 @@
 }
 
 .nirvana {
-    font-size: 3rem;
+    font-size: 2.6rem;
     color: #ffd700;
     margin: 2rem 0;
     display: block;
     font-family: var(--font-cinzel);
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: -1px;
     animation: glow 2s infinite alternate;
 }
 

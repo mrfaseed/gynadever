@@ -39,6 +39,11 @@ export default function Navbar() {
           </Link>
         </li>
         <li className={styles.navItem}>
+          <Link href="/gallery" className={styles.navLink} onClick={() => setIsOpen(false)}>
+            Gallery
+          </Link>
+        </li>
+        <li className={styles.navItem}>
           <Link href="/contact" className={styles.navLink} onClick={() => setIsOpen(false)}>
             Contact
           </Link>

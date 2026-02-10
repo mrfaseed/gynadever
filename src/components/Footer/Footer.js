@@ -6,10 +6,7 @@ import styles from './Footer.module.css';
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            {/* Decorative Top Om Symbol */}
-            <div className={styles.decorativeTop}>
-                <span className={styles.omSymbol}>ॐ</span>
-            </div>
+
 
             <div className={styles.content}>
                 {/* Column 1: About Organization */}
@@ -32,6 +29,7 @@ export default function Footer() {
                         <li><Link href="/" className={styles.link}>Home</Link></li>
                         <li><Link href="/about" className={styles.link}>About Us</Link></li>
                         <li><Link href="/temples" className={styles.link}>Temples & Ashrams</Link></li>
+                        <li><Link href="/gallery" className={styles.link}>Gallery</Link></li>
                         <li><Link href="/contact" className={styles.link}>Contact Us</Link></li>
                     </ul>
                 </div>
