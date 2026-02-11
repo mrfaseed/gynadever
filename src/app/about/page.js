@@ -164,8 +164,8 @@ export default function About() {
             </section>
 
             {/* Literature Section: Amrutanubhav */}
-            <section className={styles.section} ref={addToRefs} style={{ borderTop: '2px solid #ffd700' }}>
-                <div className={styles.dedicationText} style={{ background: 'transparent', boxShadow: 'none', borderLeft: 'none' }}>
+            <section className={`${styles.section} ${styles.separatorSection}`} ref={addToRefs}>
+                <div className={`${styles.dedicationText} ${styles.transparentCard}`}>
                     <h2 className={styles.sectionTitle}>அமிர்தனுபாவம் (Amrutanubhav)</h2>
                     <p>
                         &quot;ஞானேஸ்வரி&quot; பகவத் கீதை ஒருவர் ஒருவருக்கு சொன்ன உபதேசம்.

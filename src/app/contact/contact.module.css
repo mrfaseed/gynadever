@@ -23,20 +23,22 @@
     pointer-events: none;
 }
 
-/* Glass Card - Light Theme */
+/* Glass Card - Dark Theme */
 .card {
     position: relative;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(10, 10, 26, 0.95);
+    /* Dark Royal Blue/Navy from Footer */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    /* Gold border */
     border-radius: 20px;
     padding: 4rem;
     max-width: 800px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -47,7 +49,7 @@
 .title {
     font-family: "Google Sans", sans-serif;
     font-size: 3.5rem;
-    color: #1a1a1a;
+    color: #ffd700;
     background: linear-gradient(to right, #b8860b, #d4af37, #cd853f);
     background-clip: text;
     -webkit-background-clip: text;
@@ -63,9 +65,11 @@
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -74,7 +78,8 @@
 .subtitle {
     font-family: "Google Sans", sans-serif;
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: #f0f0f0;
+    /* Light text */
     margin-bottom: 0.5rem;
     letter-spacing: -1px;
     font-weight: 600;
@@ -91,17 +96,20 @@
 .address {
     font-family: "Google Sans", sans-serif;
     font-size: 1.2rem;
-    color: #555;
+    color: #d0d0d0;
+    /* Light grey */
     line-height: 1.8;
     margin-top: 1rem;
 }
 
 /* Decorative Icon/Divider */
 .divider {
-    width: 100px;
+    width: 150px;
     height: 3px;
-    background: linear-gradient(90deg, transparent, #d4af37, transparent);
-    margin: 1.5rem 0;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    margin: 1.5rem auto;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 
@@ -113,7 +121,8 @@
     gap: 2rem;
     width: 100%;
     margin-top: 2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    /* Gold separator */
     padding-top: 2rem;
 }
 
@@ -133,7 +142,8 @@
 .label {
     font-family: var(--font-cinzel), serif;
     font-size: 0.9rem;
-    color: #888;
+    color: #d4af37;
+    /* Gold label */
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
@@ -141,7 +151,8 @@
 
 .value {
     font-family: var(--font-roboto-flex), sans-serif;
-    color: #333;
+    color: #f0f0f0;
+    /* White/Light value */
     font-size: 1.1rem;
     font-weight: 500;
 }

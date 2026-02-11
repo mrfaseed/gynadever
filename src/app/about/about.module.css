@@ -72,10 +72,9 @@
     align-items: center;
     gap: 3rem;
     opacity: 0;
-    animation: fadeInOnScroll 1s forwards;
-    /* Needs JS or simple delay */
-    animation-delay: 0.2s;
-    animation-fill-mode: forwards;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
 }
 
 /* Dedication Section */
@@ -267,7 +266,8 @@
 .literatureSection {
     border-radius: 10px;
     padding-top: 2rem;
-    background-color: #4a0404;
+    background-color: #0a0a1a;
+    /* Updated to Footer Blue */
     color: #fff;
     position: relative;
 }
@@ -429,31 +429,157 @@
     }
 }
 
+/* Variant Classes */
+.separatorSection {
+    border-top: 2px solid #ffd700;
+}
+
+.transparentCard {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-left: none !important;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-
-    .section,
     .container {
-        padding: 2rem 1rem;
+        font-size: 16px;
+        /* Base font size adjustment */
     }
 
-    .hero {
-        height: 50vh;
-    }
-
-    .title {
-        font-size: 2.5rem;
-    }
-
-    .bookContainer,
     .section {
+        padding: 3rem 1.5rem;
+        /* More balanced padding */
+        gap: 2rem;
         flex-direction: column;
     }
 
+    .hero {
+        height: 60vh;
+        /* Slightly taller for better content fit */
+        background-attachment: scroll;
+        /* Fix parallax jerkiness on mobile */
+    }
+
+    .heroContent {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+        /* Clean, readable size */
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+
+    /* Reorder content: Image first */
     .dedicationImage,
     .bookImageWrapper {
         order: -1;
-        /* Image first on mobile */
-        margin-bottom: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .dedicationText {
+        padding: 1.5rem;
+        /* Comfortable reading padding */
+        text-align: left;
+        /* Easier to read on mobile */
+        font-size: 1rem;
+        border-left-width: 3px;
+        /* Subtle border */
+    }
+
+    /* Adjust 3D Book for mobile */
+    .book3D {
+        width: 200px;
+        /* Smaller book */
+        height: 280px;
+        transform: rotateY(-15deg);
+        /* Less extreme rotation */
+    }
+
+    .book3D:hover {
+        transform: rotateY(0deg) scale(1.02);
+    }
+
+    /* Bio Section */
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+
+    .bioContent {
+        padding: 0 0.5rem;
+    }
+
+    .infoCard {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Literature Section */
+    .bookContainer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .bookTitle {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .bookDesc {
+        font-size: 1rem;
+        text-align: center;
+        /* Center align for balanced look */
+    }
+
+    .addressBox {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    /* Downloads */
+    .downloadBtn {
+        display: block;
+        /* Stack buttons */
+        width: 100%;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    /* Quote Section */
+    .quoteSection {
+        padding: 4rem 1.5rem;
+        background-attachment: scroll;
+    }
+
+    .quoteText {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .nirvana {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .dedicationText {
+        padding: 1rem;
     }
 }

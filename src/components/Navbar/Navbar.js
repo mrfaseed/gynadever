@@ -30,7 +30,7 @@ export default function Navbar() {
         </li>
         <li className={styles.navItem}>
           <Link href="/about" className={styles.navLink} onClick={() => setIsOpen(false)}>
-            About Us
+            About
           </Link>
         </li>
         <li className={styles.navItem}>
