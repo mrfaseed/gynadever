@@ -22,7 +22,7 @@ const temples = [
                 </p>
             </>
         ),
-        image: "/spiritual_hero.png" // Using hero as placeholder for Alandi
+        image: "/Alandi.jpg"
     },
     {
         id: 2,
@@ -41,7 +41,7 @@ const temples = [
                 </p>
             </>
         ),
-        image: "/background_full.png" // Fallback placeholder since generation is capped
+        image: "/Paithan.webp"
     },
     {
         id: 3,
@@ -67,6 +67,23 @@ const temples = [
 export default function Temples() {
     return (
         <div className={styles.container}>
+            {/* Layers */}
+            <div className={styles.pageBackground}></div>
+
+            {/* Background Mandalas */}
+            <div className={styles.backgroundEffects}>
+                <img
+                    src="/bg1_circle.png"
+                    alt=""
+                    className={`${styles.mandala} ${styles.mandalaTopLeft}`}
+                />
+                <img
+                    src="/bg1_circle.png"
+                    alt=""
+                    className={`${styles.mandala} ${styles.mandalaBottomRight}`}
+                />
+            </div>
+
             <div className={styles.hero}>
                 <div className={styles.heroContent}>
                     <h1 className={styles.title}>Sacred Temples</h1>

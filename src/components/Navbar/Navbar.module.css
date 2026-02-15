@@ -2,7 +2,6 @@
 .navbar {
     display: flex;
     justify-content: right;
-    /* Centering everything primarily */
     align-items: center;
     padding: 0.8rem 1rem;
     position: sticky;
@@ -10,39 +9,16 @@
     z-index: 1000;
     width: 100%;
 
-    /* Primary Theme Gradient (Saffron -> Deep Red -> Maroon) */
-    background: linear-gradient(135deg, #ff9933 0%, #ff5500 50%, #800000 100%);
-
-    /* Temple/Infinity Pattern Overlay */
-    /* Using radial gradients to simulate a subtle mandala/dot pattern */
-    background-image:
-        radial-gradient(circle at 100% 100%, rgba(255, 215, 0, 0.15) 10%, transparent 11%),
-        radial-gradient(circle at 0% 0%, rgba(255, 215, 0, 0.15) 10%, transparent 11%),
-        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 2px, transparent 2.5px);
-    background-size: 100% 100%, 100% 100%, 20px 20px;
-    background-repeat: no-repeat, no-repeat, repeat;
+    /* Updated for White Theme */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     /* Border & Shadow */
-    border-bottom: 2px solid #ffd700;
-    /* Gold Border */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 
     transition: all 0.3s ease-in-out;
-}
-
-/* Mirror/Glass Effect Overlay at Bottom */
-.navbar::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30%;
-    /* Lower part reflection */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
-    pointer-events: none;
-    backdrop-filter: blur(2px);
-    z-index: 0;
 }
 
 /* Logo Section */
@@ -59,16 +35,16 @@
 
 .logoText {
     font-family: var(--font-roboto-flex), sans-serif;
-    /* Or a suitable serif */
     font-size: 1.8rem;
     font-weight: 700;
-    color: #fff;
+    color: #1a1a1a;
+    /* Dark text for visibility */
     letter-spacing: -2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(to bottom, #ffd700, #ffec8b);
+    background: linear-gradient(to right, #bf953f, #e0ba68, #b38728, #aa771c);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* Gold Gradient Text */
 }
 
 /* Navigation Links */
@@ -78,9 +54,7 @@
     list-style: none;
     z-index: 1;
     align-items: center;
-    /* Ensure items inside are vertically centered */
     margin: 0;
-    /* Remove default ul margin */
 }
 
 .navItem {
@@ -89,23 +63,21 @@
 
 .navLink {
     padding: 0.5rem 1rem;
-    /* Balanced Padding */
-    color: #fff;
+    color: #555;
+    /* Dark Grey for readability */
     font-size: 1.1rem;
     font-weight: 500;
     letter-spacing: -1px;
     transition: color 0.3s ease;
     font-family: var(--font-roboto-flex), sans-serif;
-    /* Fallback, maybe import a Google Font */
     display: flex;
     align-items: center;
     height: 100%;
 }
 
 .navLink:hover {
-    color: #ffd700;
+    color: #d4af37;
     /* Gold on hover */
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
 }
 
 /* Infinity Hover Effect Underline */
@@ -116,7 +88,7 @@
     height: 2px;
     bottom: 0px;
     left: 50%;
-    background-color: #ffd700;
+    background-color: #d4af37;
     transition: all 0.3s ease-in-out;
     transform: translateX(-50%);
 }
@@ -125,32 +97,10 @@
     width: 100%;
 }
 
-/* Call to Action Button (Donate) */
-.donateBtn {
-    background: linear-gradient(45deg, #ffd700, #ffcc00);
-    color: #800000;
-    padding: 0.6rem 1.5rem;
-    border-radius: 50px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: 2px solid #fff;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    z-index: 1;
-    font-family: sans-serif;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.donateBtn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
-    background: linear-gradient(45deg, #ffcc00, #e6b800);
-}
-
 /* Mobile Menu Icon */
 .menuIcon {
     display: none;
-    color: #fff;
+    color: #333;
     font-size: 1.8rem;
     cursor: pointer;
     z-index: 2;
@@ -164,10 +114,12 @@
         left: 0;
         width: 100%;
         flex-direction: column;
-        background: linear-gradient(135deg, #ff5500, #800000);
+        background: #ffffff;
         padding: 2rem;
         gap: 1.5rem;
         align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         clip-path: circle(0% at 100% 0);
         transition: clip-path 0.5s ease-in-out;
     }
