@@ -24,7 +24,7 @@ const AmrutanubhavSection = ({ addToRefs }) => {
                 </p>
 
                 <div className={styles.downloadSection}>
-                    <a href="#" className={styles.downloadBtn} onClick={(e) => e.preventDefault()}>Download Amrutanubhav</a>
+                    <a href="https://firebasestorage.googleapis.com/v0/b/renomatedialysis.firebasestorage.app/o/%E0%AE%85...pdf?alt=media&token=…" className={styles.downloadBtn} target="_blank" rel="noopener noreferrer">Download Amrutanubhav</a>
                     <a href="#" className={styles.downloadBtn} onClick={(e) => e.preventDefault()}>Download Changdev Pasashti</a>
                 </div>
             </div>
