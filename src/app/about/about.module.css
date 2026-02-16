@@ -1,20 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=BBH+Hegarty&family=Baloo+Thambi+2:wght@400..800&family=Bebas+Neue&family=Changa+One:ital@0;1&family=Damion&family=Figtree:ital,wght@0,300..900;1,300..900&family=Geom:ital,wght@0,300..900;1,300..900&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Momo+Signature&family=Momo+Trust+Display&family=Notable&family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sekuya&family=Syncopate:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=BBH+Hegarty&family=Baloo+Thambi+2:wght@400..800&family=Bebas+Neue&family=Changa+One:ital@0;1&family=Damion&family=Figtree:ital,wght@0,300..900;1,300..900&family=Geom:ital,wght@0,300..900;1,300..900&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Momo+Signature&family=Momo+Trust+Display&family=Notable&family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Sekuya&family=Syncopate:wght@400;700&family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* Main Container */
 .container {
     min-height: 100vh;
     background-color: #ffffff;
-    /* Old Lace / Parchment color */
-    color: #4a0404;
-    /* Deep Maroon Text */
-    font-family: 'Georgia', serif;
+    color: #1e3a8a; /* Deep Royal Blue */
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
 /* Hero Section */
 .hero {
     position: relative;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,9 +20,9 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* Parallax effect */
     text-align: center;
     color: #fff;
+    overflow: hidden;
 }
 
 .heroOverlay {
@@ -33,84 +31,100 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(74, 4, 4, 0.7));
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(30, 58, 138, 0.85));
+    backdrop-filter: blur(2px);
 }
 
 .heroContent {
     position: relative;
     z-index: 2;
-    padding: 2rem;
-    animation: fadeInUp 1.5s ease-out;
+    padding: 3rem;
+    animation: fadeInZoom 1.8s ease-out;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 .title {
-    font-family: var(--font-cinzel), serif;
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
-    background: linear-gradient(to bottom, #ffd700, #ffec8b);
+    font-family: 'Cinzel', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #ffffff, #baecf9, #ffffff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4px 20px rgba(0, 191, 255, 0.5);
+    animation: shimmer 3s infinite linear;
+    background-size: 200% auto;
 }
 
 .subtitle {
-    font-size: 1.5rem;
-    color: #ffd700;
+    font-size: 1.8rem;
+    color: #e0f2fe;
+    font-weight: 300;
     margin-top: 1rem;
-    letter-spacing: -1px;
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
 }
 
 /* Content Sections */
 .section {
-    padding: 4rem 2rem;
-    max-width: 1200px;
+    padding: 6rem 2rem;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    will-change: opacity, transform;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Dedication Section */
 .dedicationText {
     flex: 1;
-    font-size: 1.2rem;
-    line-height: 1.8;
+    font-size: 1.25rem;
+    line-height: 2;
     text-align: justify;
-    background: rgb(255, 255, 255);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #ff9933;
+    background: #f8fafc;
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    border-left: 6px solid #3b82f6; /* Blue border */
+    position: relative;
+    overflow: hidden;
+}
+
+.dedicationText::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 30%, rgba(59, 130, 246, 0.05) 50%, transparent 70%);
+    background-size: 200% 100%;
+    animation: shine 4s infinite linear;
 }
 
 .dedicationImage {
     flex: 1;
     display: flex;
     justify-content: center;
-}
-
-.sageImage {
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border: 3px solid #ffd700;
-    transition: transform 0.3s ease;
-}
-
-.sageImage:hover {
-    transform: scale(1.02);
-}
-
-/* 3D Book Design */
-.bookWrapper {
     perspective: 1000px;
+}
+
+.dedicationImage .bookWrapper {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* 3D Book Design - Blue Theme */
+.bookWrapper {
+    perspective: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,166 +132,173 @@
 }
 
 .book3D {
-    width: 280px;
-    /* Slightly wider */
-    height: 380px;
+    width: 300px;
+    height: 420px;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateY(-25deg);
-    transition: transform 0.5s ease;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
-    background: #3e2723;
-    /* Darker leather color */
-    border-radius: 4px 12px 12px 4px;
+    transform: rotateY(-20deg) rotateX(5deg);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 30px 40px 60px rgba(0, 20, 60, 0.3);
+    background: #0f172a; /* Dark Navy Blue */
+    border-radius: 6px 16px 16px 6px;
 }
 
 .book3D:hover {
-    transform: rotateY(0deg) scale(1.05);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transform: rotateY(0deg) scale(1.05) rotateX(0deg);
+    box-shadow: 10px 20px 40px rgba(0, 30, 90, 0.25);
+    z-index: 10;
 }
 
-/* The Image as the Cover */
 .bookCoverImage {
     width: 100%;
     height: 100%;
-    object-fit: fill;
-    /* Ensure the user image covers fully */
-    border-radius: 0 12px 12px 0;
+    object-fit:cover;
+    border-radius: 0 16px 16px 0;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
-    /* Fancy Old Border Effect on Cover */
-    border: 5px solid #d4af37;
-    /* Thicker gold border */
-    border-left: 10px solid #2d1b18;
-    /* Spine connection */
-    filter: sepia(0.2);
-    /* Slight vintage tone */
+    border: 4px solid #60a5fa; /* Light Blue Border */
+    border-left: 8px solid #1e3a8a; /* Darker spine connection */
+    /* Add a blue overlay to the image to fit the theme */
+    filter: contrast(1.1) saturate(0.9); 
 }
 
-/* Book Pages / Thickness illusion */
+/* Book Pages */
 .book3D::before {
     content: '';
     position: absolute;
-    top: 5px;
+    top: 6px;
     left: 100%;
-    /* Right side */
-    width: 40px;
+    width: 45px;
     height: 96%;
-    /* Slightly shorter */
-    background: repeating-linear-gradient(90deg,
-            #fff,
-            #f0f0f0 2px,
-            #ddd 4px);
-    transform: rotateY(90deg) translateX(-20px);
-    /* Adjust based on width */
+    background: repeating-linear-gradient(90deg, #fff, #f1f5f9 2px, #cbd5e1 4px);
+    transform: rotateY(90deg) translateX(-22px);
     transform-origin: left;
     z-index: 1;
-    border: 1px solid #ccc;
+    border: 1px solid #94a3b8;
 }
 
-/* Spine illusion (left side) */
+/* Spine */
 .book3D::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 30px;
+    width: 35px;
     height: 100%;
-    background: linear-gradient(to right, #4a0404, #800000, #4a0404);
-    transform: rotateY(-90deg) translateX(-15px);
+    background: linear-gradient(to right, #0f172a, #1e40af, #0f172a);
+    transform: rotateY(-90deg) translateX(-17px);
     transform-origin: left;
 }
 
 /* Biography Section */
 .bioSection {
-    background: linear-gradient(135deg, #fff8e7, #fff0db);
+    background: linear-gradient(160deg, #f0f9ff 0%, #e0f2fe 100%);
     position: relative;
     overflow: hidden;
+    border-radius: 40px;
+    box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.5);
+    margin: 4rem 2rem;
+    width: calc(100% - 4rem);
 }
 
-/* Temple Pattern Background Overlay */
 .bioSection::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 60%);
+    animation: rotateBg 20s linear infinite;
+}
+
+.sectionTitle {
+    width: 100%;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    color: #1e3a8a;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+}
+
+.sectionTitle::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(to right, #3b82f6, #93c5fd);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.bioContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.infoCard {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+    border-left: 5px solid #2563eb;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.infoCard:hover {
+    transform: translateY(-8px) translateX(5px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+}
+
+.infoTitle {
+    font-weight: 700;
+    color: #2563eb; /* Bright Blue */
+    margin-bottom: 0.8rem;
+    display: block;
+    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Literature Section (Dark Blue Theme) */
+.literatureSection {
+    background: linear-gradient(145deg, #0f172a, #1e3a8a);
+    color: #ffffff;
+    padding: 6rem 4rem;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.literatureSection::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(#ff9933 1px, transparent 1px);
-    background-size: 30px 30px;
-    opacity: 0.1;
-    pointer-events: none;
-}
-
-.sectionTitle {
-    width: 100%;
-    text-align: center;
-    font-family: var(--font-cinzel), serif;
-    font-size: 2.2rem;
-    color: #800000;
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 1;
-    letter-spacing: -1px;
-
-}
-
-.sectionTitle::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 3px;
-    background: #ffd700;
-    margin: 10px auto;
-}
-
-.bioContent {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    z-index: 1;
-}
-
-.infoCard {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #800000;
-    transition: transform 0.2s;
-}
-
-.infoCard:hover {
-    transform: translateX(5px);
-}
-
-.infoTitle {
-    font-weight: bold;
-    color: #ff5500;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-
-/* Literature Section (Books) */
-.literatureSection {
-    border-radius: 10px;
-    padding-top: 2rem;
-    background-color: #0a0a1a;
-    /* Updated to Footer Blue */
-    color: #fff;
-    position: relative;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .bookContainer {
     display: flex;
     flex-direction: row-reverse;
-    /* Image on right */
-    gap: 3rem;
+    gap: 5rem;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .bookImageWrapper {
@@ -285,88 +306,104 @@
     position: relative;
 }
 
-.bookImage {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-    border: 2px solid #ffd700;
-}
-
-.bookContent {
-    flex: 1;
-}
-
 .bookTitle {
-    letter-spacing: -1px;
-    font-size: 2rem;
-    color: #ffd700;
-    margin-bottom: 1rem;
-    font-family: var(--font-cinzel);
+    font-size: 3rem;
+    color: #bfdbfe; /* Light Blue */
+    margin-bottom: 1.5rem;
+    font-family: 'Cinzel', serif;
+    background: linear-gradient(to right, #bfdbfe, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .bookDesc {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    color: #e0e0e0;
+    font-size: 1.2rem;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+    color: #e2e8f0; /* Slate 200 */
 }
 
 .addressBox {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.05); /* Glassmorphism */
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+}
+
+.addressBox:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .addressTitle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-family: "Google Sans", sans-serif;
-    color: #ffd700;
+    color: #60a5fa;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .addressBox p {
-    font-family: "Google Sans", sans-serif;
+    font-family: "Inter Tight", sans-serif;
     font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 0.5rem;
 }
 
 /* Downloads Section */
+.separatorSection {
+    border-top: none;
+    background: #ffffff;
+}
+
 .downloadSection {
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .downloadBtn {
-    font-family: "Google sans", sans-serif;
-    display: inline-block;
-    background: linear-gradient(45deg, #ff9933, #ff5500);
+    font-family: "Google Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 1.2rem 3rem;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
-    margin: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
 }
 
 .downloadBtn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(255, 85, 0, 0.4);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
+    background: #fff;
+    color: #2563eb;
+    border-color: #2563eb;
 }
 
 /* Philosophy Quote Section */
 .quoteSection {
-    background-image: url('/spiritual_hero.png');
-    /* Reuse hero bg or a dark variant */
+    background-image: url('/spiritual_hero.png'); /* Or a blue abstract bg */
     background-size: cover;
     background-attachment: fixed;
-    padding: 6rem 2rem;
+    padding: 8rem 2rem;
     text-align: center;
     position: relative;
     color: #fff;
+    overflow: hidden;
 }
 
 .quoteOverlay {
@@ -375,211 +412,193 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    /* Dark overlay */
+    background: linear-gradient(to top, rgba(15, 23, 42, 1), rgba(30, 58, 138, 0.7));
     z-index: 1;
 }
 
 .quoteContent {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .quoteText {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-style: italic;
-    line-height: 2;
-    font-family: var(--font-playfair), serif;
-    color: #fdf5e6;
+    line-height: 2.2;
+    font-family: 'Playfair Display', serif;
+    color: #f1f5f9;
+}
+
+.quoteText p {
+    margin-bottom: 1rem;
+    opacity: 0.9;
 }
 
 .nirvana {
-    font-size: 2.6rem;
-    color: #ffd700;
-    margin: 2rem 0;
+    font-size: 4rem;
+    color: #ffffff;
+    margin: 3rem 0;
     display: block;
-    font-family: var(--font-cinzel);
+    font-family: 'Cinzel', serif;
     text-transform: uppercase;
-    letter-spacing: -1px;
-    animation: glow 2s infinite alternate;
+    letter-spacing: 5px;
+    animation: blueGlow 3s infinite alternate;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
 }
 
 /* Animations */
-@keyframes fadeInUp {
+@keyframes fadeInZoom {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: scale(0.9);
     }
-
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
     }
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0 0 5px #ffd700;
-    }
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
 
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes shine {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+}
+
+@keyframes rotateBg {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes blueGlow {
+    from {
+        text-shadow: 0 0 10px #60a5fa, 0 0 20px #3b82f6;
+    }
     to {
-        text-shadow: 0 0 20px #ff9933, 0 0 10px #ff5500;
+        text-shadow: 0 0 30px #93c5fd, 0 0 60px #60a5fa, 0 0 80px #3b82f6;
     }
 }
 
 /* Variant Classes */
-.separatorSection {
-    border-top: 2px solid #ffd700;
-}
-
 .transparentCard {
     background: transparent !important;
     box-shadow: none !important;
     border-left: none !important;
 }
 
+/* Scroll Animation Helper (Applied via JS) */
+.section[style*="opacity: 1"] {
+    animation: slideUpFade 1s forwards;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .container {
-        font-size: 16px;
-        /* Base font size adjustment */
-    }
-
-    .section {
-        padding: 3rem 1.5rem;
-        /* More balanced padding */
-        gap: 2rem;
-        flex-direction: column;
+        font-size: 15px;
     }
 
     .hero {
         height: 60vh;
-        /* Slightly taller for better content fit */
         background-attachment: scroll;
-        /* Fix parallax jerkiness on mobile */
-    }
-
-    .heroContent {
-        padding: 1rem;
     }
 
     .title {
-        font-size: 2.2rem;
-        /* Clean, readable size */
+        font-size: 2.5rem;
         line-height: 1.2;
     }
 
     .subtitle {
         font-size: 1.2rem;
-        margin-top: 0.5rem;
     }
 
-    /* Reorder content: Image first */
-    .dedicationImage,
-    .bookImageWrapper {
+    .section {
+        padding: 3rem 1.5rem;
+        gap: 2rem;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .dedicationImage, .bookImageWrapper {
         order: -1;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 1.5rem;
     }
 
     .dedicationText {
         padding: 1.5rem;
-        /* Comfortable reading padding */
-        text-align: left;
-        /* Easier to read on mobile */
-        font-size: 1rem;
-        border-left-width: 3px;
-        /* Subtle border */
+        border-left-width: 4px;
     }
 
-    /* Adjust 3D Book for mobile */
     .book3D {
-        width: 200px;
-        /* Smaller book */
-        height: 280px;
-        transform: rotateY(-15deg);
-        /* Less extreme rotation */
+        width: 220px;
+        height: 300px;
+        transform: rotateY(-10deg);
     }
 
     .book3D:hover {
-        transform: rotateY(0deg) scale(1.02);
+        transform: rotateY(0deg);
     }
 
-    /* Bio Section */
+    .bioSection {
+        width: 100%;
+        margin: 2rem 0;
+        border-radius: 0;
+        padding: 2rem 1rem;
+    }
+    
     .sectionTitle {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
-    .bioContent {
-        padding: 0 0.5rem;
+    .literatureSection {
+        padding: 3rem 1.5rem;
+        border-radius: 0;
     }
 
-    .infoCard {
-        padding: 1rem;
-        font-size: 0.95rem;
-    }
-
-    /* Literature Section */
     .bookContainer {
         flex-direction: column;
         gap: 2rem;
     }
 
     .bookTitle {
-        font-size: 1.6rem;
+        font-size: 2rem;
         text-align: center;
     }
 
-    .bookDesc {
-        font-size: 1rem;
-        text-align: center;
-        /* Center align for balanced look */
-    }
-
-    .addressBox {
-        padding: 1rem;
+    .bookDesc, .addressBox {
         text-align: center;
     }
 
-    /* Downloads */
     .downloadBtn {
-        display: block;
-        /* Stack buttons */
         width: 100%;
-        margin: 0.5rem 0;
-        text-align: center;
-    }
-
-    /* Quote Section */
-    .quoteSection {
-        padding: 4rem 1.5rem;
-        background-attachment: scroll;
-    }
-
-    .quoteText {
-        font-size: 1.1rem;
-        line-height: 1.8;
+        font-size: 1rem;
     }
 
     .nirvana {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .title {
-        font-size: 1.8rem;
-    }
-
-    .section {
-        padding: 2rem 1rem;
-    }
-
-    .dedicationText {
-        padding: 1rem;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
     }
 }
