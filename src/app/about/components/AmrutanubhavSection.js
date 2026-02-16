@@ -1,0 +1,35 @@
+import React from 'react';
+import styles from '../about.module.css';
+
+const AmrutanubhavSection = ({ addToRefs }) => {
+    return (
+        <section className={`${styles.section} ${styles.separatorSection}`} ref={addToRefs}>
+            <div className={`${styles.dedicationText} ${styles.transparentCard}`}>
+                <h2 className={styles.sectionTitle}>அமிர்தனுபாவம் (Amrutanubhav)</h2>
+                <p>
+                    &quot;ஞானேஸ்வரி&quot; பகவத் கீதை ஒருவர் ஒருவருக்கு சொன்ன உபதேசம்.
+                    ஆனால் இவருடைய உள் அனுபவத்தில் இருந்து சொல்லப்பட்ட, வேதங்களுக்கு இணையான நூல் &quot;அமிர்தனுபாவம்&quot;.
+                </p>
+                <br />
+                <p>
+                    இது ப்ரம்மம், இருக்கிறது, ஆத்மா என்று கூட பெயர் வைப்பதில்லை. கொஞ்சம் கூட இவர் &quot;நான்&quot; என்கிற தனித்தன்மை வைப்பதில்லை.
+                    இந்த நூலைப் படிக்கும் பொழுதே &quot;நான்&quot; என்ற தனித்தன்மை கரைந்துவிடும். இது படித்து அடுத்தவர்களுக்கு பாடம் எடுக்கும் நூல் கிடையாது.
+                    தனித்தன்மையின் சாம்பல் கூட மிஞ்சாத ஒரு பொக்கிஷம்.
+                </p>
+                <br />
+                <p>
+                    இந்த நூல் இதுவரை தமிழில் கிடையாது. ஆனால் திருவண்ணாமலையில் ஒரு ஆத்ம சாதகர் ஒருவருக்கு ஸ்ரீ ஞானேஸ்வர் மகாராஜ் அவருள் இருந்து
+                    தமிழ் மொழியில் கொஞ்சம் கூட தத்துவம் மாறாமல் மொழிபெயர்த்துள்ளார்.
+                    இப்படிப்பட்ட நூல் அனைவருக்கும் கிடைப்பதற்காக, பதிவிறக்கம் செய்து கொள்வதற்கு ஏதுவாக இந்த இணையத்தளத்தில் கொடுத்துள்ளோம்.
+                </p>
+
+                <div className={styles.downloadSection}>
+                    <a href="#" className={styles.downloadBtn} onClick={(e) => e.preventDefault()}>Download Amrutanubhav</a>
+                    <a href="#" className={styles.downloadBtn} onClick={(e) => e.preventDefault()}>Download Changdev Pasashti</a>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default AmrutanubhavSection;
