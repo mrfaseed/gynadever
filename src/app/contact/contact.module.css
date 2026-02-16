@@ -1,173 +1,311 @@
-/* Main Container - Pure White */
+/* Main Container */
 .container {
     min-height: 100vh;
-    background-color: #ffffff;
-    color: #333;
+    color: #1a1a1a;
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+    padding-bottom: 4rem;
     position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 6rem 1rem;
 }
 
-/* Canvas for Particles */
-.canvas {
-    position: absolute;
+/* Base White Background Layer */
+.pageBackground {
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: -2;
     pointer-events: none;
 }
 
-/* Glass Card - Dark Theme */
-.card {
-    position: relative;
-    z-index: 1;
-    background: rgba(10, 10, 26, 0.95);
-    /* Dark Royal Blue/Navy from Footer */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    /* Gold border */
-    border-radius: 20px;
-    padding: 4rem;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
+/* Background Mandala Effects */
+.backgroundEffects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
 }
 
-/* Typography */
+.mandala {
+    position: absolute;
+    opacity: 0.4;
+    animation: spin 120s linear infinite;
+}
+
+.mandalaTopLeft {
+    top: -30vmin;
+    left: -30vmin;
+    width: 100vmin;
+    height: 100vmin;
+}
+
+.mandalaBottomRight {
+    bottom: -20vmin;
+    right: -20vmin;
+    width: 60vmin;
+    height: 60vmin;
+    animation-duration: 90s;
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 40vh;
+    /* Slightly shorter than temple page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    margin-bottom: 2rem;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 900px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
 .title {
     font-family: "Google Sans", sans-serif;
-    font-size: 3.5rem;
-    color: #ffd700;
-    background: linear-gradient(to right, #b8860b, #d4af37, #cd853f);
+    font-size: 4.3rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    /* Gold Gradient matching Temple page */
+    background: linear-gradient(to right, #bf953f, #e0ba68, #b38728, #c5c096, #aa771c);
+    background-size: 200% auto;
+    color: #000;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
-    font-weight: 500;
-    letter-spacing: -1px;
-    background-size: 200% auto;
-    animation: gradientAnimation 3s ease-in-out infinite;
+    animation: shine 10s linear infinite;
 }
 
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
+@keyframes shine {
+    to {
+        background-position: 200% center;
     }
 }
 
+/* Layout Grid - Now Single Centered Container */
+.grid {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Single Card Design */
+.card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-color: #d4af37;
+}
+
+/* Table Styles - Premium Redesign */
+/* Table Styles - Premium Redesign */
+.contactTable {
+    width: 100%;
+    max-width: 800px;
+    /* Limit width to keep columns closer */
+    margin: 2rem auto;
+    /* Center table */
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.contactTable tr {
+    transition: background-color 0.3s ease;
+}
+
+.contactTable tr:hover {
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+.contactTable th,
+.contactTable td {
+    padding: 1.8rem;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    /* Very light grey */
+    text-align: left;
+}
+
+.contactTable tr:last-child td {
+    border-bottom: none;
+}
+
+.tableLabel {
+    width: 45%;
+    /* Slightly less than 50% to pinch in */
+    font-family: "Google Sans", sans-serif;
+    font-size: 0.95rem;
+    color: #b38728;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: right !important;
+    /* Force Right Alignment */
+    border-right: 1px solid rgba(212, 175, 55, 0.2);
+    padding-right: 3rem !important;
+    /* Space from divider */
+}
+
+.tableValue {
+    width: 55%;
+    /* Slightly more than 50% */
+    font-family: "Google Sans", sans-serif;
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.8;
+    text-align: left !important;
+    /* Force Left Alignment */
+    padding-left: 3rem !important;
+    /* Space from divider */
+}
+
+
+
+/* Reuse existing typography */
 .subtitle {
     font-family: "Google Sans", sans-serif;
     font-size: 1.8rem;
-    color: #f0f0f0;
-    /* Light text */
+    color: #d4af37;
     margin-bottom: 0.5rem;
-    letter-spacing: -1px;
-    font-weight: 600;
+    line-height: 1.3;
+    font-weight: 500;
+    text-align: center;
+}
+
+.subText {
+    font-family: "Google Sans", sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .tamilText {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: #d4af37;
-    /* Gold */
-    font-weight: 400;
-}
-
-.address {
     font-family: "Google Sans", sans-serif;
     font-size: 1.2rem;
-    color: #d0d0d0;
-    /* Light grey */
-    line-height: 1.8;
-    margin-top: 1rem;
-}
-
-/* Decorative Icon/Divider */
-.divider {
-    width: 150px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #ffd700, transparent);
-    margin: 1.5rem auto;
-    border-radius: 2px;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-}
-
-
-
-/* Contact Details Grid */
-.detailsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    margin-top: 2rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
-    /* Gold separator */
-    padding-top: 2rem;
-}
-
-.detailItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    line-height: 1.6;
+    color: #555555;
+    display: block;
+    margin-top: 0.3rem;
 }
 
 .icon {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
     color: #d4af37;
-    margin-bottom: 0.5rem;
+    vertical-align: middle;
 }
 
-.label {
-    font-family: var(--font-cinzel), serif;
-    font-size: 0.9rem;
-    color: #d4af37;
-    /* Gold label */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.value {
-    font-family: var(--font-roboto-flex), sans-serif;
-    color: #f0f0f0;
-    /* White/Light value */
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
     .title {
         font-size: 2.5rem;
     }
 
-    .card {
-        padding: 2rem;
+    .grid {
+        padding: 0 1rem;
     }
 
-    .tamilText {
-        font-size: 1.2rem;
+    .card {
+        padding: 1.5rem;
+    }
+
+    /* Reset Table for Mobile Stack */
+    .contactTable {
+        display: block;
+        width: 100%;
+    }
+
+    .contactTable tbody,
+    .contactTable tr,
+    .contactTable td {
+        display: block;
+        width: 100%;
+    }
+
+    .contactTable tr {
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 1rem;
+    }
+
+    .contactTable tr:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .tableLabel {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0 !important;
+        border-right: none !important;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: #d4af37;
+    }
+
+    .tableValue {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0 !important;
+        padding-bottom: 1rem !important;
+        border-bottom: none !important;
+    }
+
+    .hero {
+        height: 30vh;
     }
 }
