@@ -49,13 +49,24 @@
 }
 
 .title {
-    font-family: 'Cinzel', serif;
+    font-family: 'Google Sans', sans-serif;
     font-size: 4rem;
-    /* Adjusted for better fit */
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 0.5rem;
-    color: #ffffff;
-    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: -2px;
+    background: linear-gradient(to right, #bf953f, #e0ba68, #b38728, #c5c096, #aa771c);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 10s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .subtitle {

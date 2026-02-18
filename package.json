@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-{
-  "name": "gynadever",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "firebase": "^12.9.0",
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
-  },
-  "devDependencies": {
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6"
-  }
-}
-=======
 {
   "name": "gynadever",
   "version": "0.1.0",
@@ -39,11 +16,11 @@
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "sass": "^1.97.3"
+    "sass": "^1.97.3",
+    "swiper": "^12.1.1"
   },
   "devDependencies": {
-    "eslint": "^9",
+    "eslint": "^9.0.0",
     "eslint-config-next": "16.1.6"
   }
 }
->>>>>>> 514d95266ab498c62587bdf9c1a01a6266086a54

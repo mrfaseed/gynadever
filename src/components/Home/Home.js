@@ -1,16 +1,15 @@
+import Slideshow from './Slideshow';
 import styles from './Home.module.css';
 
 const Home = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.backgroundWrapper}>
-                <img
-                    src="/bg1_circle.png"
-                    alt="Rotating Background"
-                    className={styles.backgroundImage}
-                />
+            {/* Section 1: Full Screen Slideshow */}
+            <div className={styles.slideshowSection}>
+                <Slideshow />
             </div>
-            {/* Content can go here */}
+
+
         </div>
     );
 };
