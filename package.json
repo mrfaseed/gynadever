@@ -10,12 +10,17 @@
   },
   "dependencies": {
     "firebase": "^12.9.0",
+    "imagesloaded": "^5.0.0",
+    "lightgallery": "^2.9.0",
+    "masonry-layout": "^4.2.2",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "sass": "^1.97.3",
+    "swiper": "^12.1.1"
   },
   "devDependencies": {
-    "eslint": "^9",
+    "eslint": "^9.0.0",
     "eslint-config-next": "16.1.6"
   }
 }
