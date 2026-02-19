@@ -1,13 +1,298 @@
 .container {
     width: 100%;
     overflow-x: hidden;
-    /* Allow vertical scrolling */
+    position: relative;
+    background-color: #faf9f6;
+    /* Off-white for premium feel */
+    font-family: var(--font-playfair), serif;
 }
 
-/* Slideshow Section is handled by the component itself being 100vh now, 
-   but we can add a wrapper if needed. For now, the Slideshow component 
-   is designed to be 100vh. */
-.slideshowSection {
+/* --- Hero Section (Slideshow Wrapper) --- */
+.heroSection {
+    position: relative;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    padding: 20px;
+}
+
+.heroTitle {
+    font-family: var(--font-cinzel), serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 0.5s;
+}
+
+.heroSubtitle {
+    font-family: var(--font-playfair), serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    line-height: 1.6;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 1s;
+}
+
+.ctaButton {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #f8b500 0%, #ff6f00 100%);
+    color: #fff;
+    font-family: var(--font-cinzel), serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(248, 181, 0, 0.4);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 1.5s;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(255, 111, 0, 0.5);
+        background: linear-gradient(135deg, #ffca28 0%, #ff8f00 100%);
+    }
+}
+
+/* --- Introduction Section --- */
+.introSection {
+    position: relative;
+    padding: 6rem 2rem;
+    text-align: center;
+    background: #fff;
+    overflow: hidden;
+}
+
+.mandalaBg {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    opacity: 0.05;
+    animation: rotate 60s linear infinite;
+    z-index: 0;
+}
+
+.introContent {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-family: var(--font-cinzel), serif;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 60%;
+        height: 3px;
+        background: #f8b500;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+}
+
+.introText {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* --- Highlights Section (Cards) --- */
+.highlightsSection {
+    padding: 4rem 2rem 6rem;
+    background: linear-gradient(to bottom, #fff 0%, #fdfbf7 100%);
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #f8b500, #ff6f00);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+        &::before {
+            transform: scaleX(1);
+        }
+
+        .cardIcon {
+            transform: scale(1.1) rotate(5deg);
+            color: #ff6f00;
+        }
+    }
+}
+
+.cardIcon {
+    font-size: 3rem;
+    color: #f8b500;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cardTitle {
+    font-family: var(--font-cinzel), serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.cardDesc {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- Quote Section (Parallax) --- */
+.quoteSection {
+    padding: 8rem 2rem;
+    background-image: url('/background_full.png');
+    /* Ensure this exists or fallback */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify_content: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        /* Dark overlay */
+    }
+}
+
+.quoteContent {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quoteText {
+    font-family: var(--font-playfair), serif;
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.quoteAuthor {
+    font-family: var(--font-cinzel), serif;
+    font-size: 1.2rem;
+    color: #f8b500;
+    letter-spacing: 2px;
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.1rem;
+    }
+
+    .sectionTitle {
+        font-size: 2.2rem;
+    }
+
+    .quoteText {
+        font-size: 1.5rem;
+    }
 }

@@ -1,104 +1,124 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import styles from './gallery.module.css';
+import LightGallery from 'lightgallery/react';
+import lgZoom from 'lightgallery/plugins/zoom';
+import lgShare from 'lightgallery/plugins/share';
+import lgHash from 'lightgallery/plugins/hash';
+import styles from './gallery.module.scss'; // Component-specific module
 
-const galleryItems = [
-    {
-        id: 6,
-        title: "Tiger of Wisdom",
-        image: "/gallery/dynaneshwar-tiger.jpg",
-        size: "wide", // Spans 2 cols
-        featured: true
-    },
-    {
-        id: 1,
-        title: "Divine Presence",
-        image: "/gallery/swami-1.jpg",
-        size: "normal"
-    },
-    {
-        id: 2,
-        title: "Sacred Teachings",
-        image: "/gallery/swami-2.jpg",
-        size: "normal"
-    },
-    {
-        id: 7,
-        title: "Eternal Light",
-        image: "/gallery/download-8.jpg",
-        size: "tall" // Spans 2 rows
-    },
-    {
-        id: 3,
-        title: "Dnyaneshwar Maharaj",
-        image: "/gallery/swami-3.jpg",
-        size: "wide"
-    },
-    {
-        id: 4,
-        title: "Serene Meditation",
-        image: "/gallery/swami-4.jpg",
-        size: "normal"
-    },
-    {
-        id: 5,
-        title: "Graceful Blessings",
-        image: "/gallery/swami-5.jpg",
-        size: "tall"
-    }
-];
+// Import LightGallery styles
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-share.css';
+import 'lightgallery/css/lg-thumbnail.css';
 
 const GalleryPage = () => {
     return (
-        <div className={styles.container}>
-            {/* Background Mandalas */}
-            <div className={styles.backgroundEffects}>
-                <img
-                    src="/bg1_circle.png"
-                    alt=""
-                    className={`${styles.mandala} ${styles.mandalaTopLeft}`}
-                />
-                <img
-                    src="/bg1_circle.png"
-                    alt=""
-                    className={`${styles.mandala} ${styles.mandalaBottomRight}`}
-                />
-            </div>
-
-            <div className={styles.titleSection}>
-                <h1 className={styles.title}>Divine Gallery</h1>
-                <p className={styles.subtitle}>
-                    A visual journey through the divine life and legacy.
-                </p>
-            </div>
-
-            <div className={styles.galleryGrid}>
-                {galleryItems.map((item) => (
-                    <div
-                        key={item.id}
-                        className={`${styles.galleryItem} ${styles[item.size]} ${item.featured ? styles.alwaysShowOverlay : ''}`}
-                    >
-                        <div className={styles.imageWrapper}>
-                            <Image
-                                src={item.image}
-                                alt={item.title}
-                                fill
-                                className={styles.galleryImage}
-                                style={{ objectFit: 'cover' }}
-                            />
-                            <div className={styles.overlay}>
-                                <h3 className={`${styles.itemTitle} ${item.featured ? styles.featuredText : ''}`}>
-                                    {item.title}
-                                </h3>
-                            </div>
-                        </div>
+        <div className="App">
+            <HeaderComponent />
+            <LightGallery
+                elementClassNames={styles.galleryGrid}
+                plugins={[lgZoom, lgShare, lgHash]}
+                speed={500}
+            >
+                {/* Gallery Images */}
+                <a
+                    data-lg-size="1600-2400"
+                    className={styles.galleryItemCard}
+                    data-src="/gallery/swami-1.jpg"
+                    data-sub-html="<h4>Swami Gnanaandha Maharaj</h4>"
+                >
+                    <div className={styles.cardImageWrapper}>
+                        <img
+                            alt="Swami Gnanaandha Maharaj 1"
+                            src="/gallery/swami-1.jpg"
+                        />
                     </div>
-                ))}
-            </div>
+                    <div className={styles.cardContent}>
+                        <h3>Swami Gnanaandha Maharaj</h3>
+                    </div>
+                </a>
+
+                <a
+                    data-lg-size="1600-2400"
+                    className={styles.galleryItemCard}
+                    data-src="/gallery/swami-2.jpg"
+                    data-sub-html="<h4>Swami Gnanaandha Maharaj</h4>"
+                >
+                    <div className={styles.cardImageWrapper}>
+                        <img
+                            alt="Swami Gnanaandha Maharaj 2"
+                            src="/gallery/swami-2.jpg"
+                        />
+                    </div>
+                    <div className={styles.cardContent}>
+                        <h3>Swami Gnanaandha Maharaj</h3>
+                    </div>
+                </a>
+
+                <a
+                    data-lg-size="1600-2400"
+                    className={styles.galleryItemCard}
+                    data-src="/gallery/swami-3.jpg"
+                    data-sub-html="<h4>Swami Gnanaandha Maharaj</h4>"
+                >
+                    <div className={styles.cardImageWrapper}>
+                        <img
+                            alt="Swami Gnanaandha Maharaj 3"
+                            src="/gallery/swami-3.jpg"
+                        />
+                    </div>
+                    <div className={styles.cardContent}>
+                        <h3>Swami Gnanaandha Maharaj</h3>
+                    </div>
+                </a>
+
+                <a
+                    data-lg-size="1600-2400"
+                    className={styles.galleryItemCard}
+                    data-src="/gallery/swami-4.jpg"
+                    data-sub-html="<h4>Swami Gnanaandha Maharaj</h4>"
+                >
+                    <div className={styles.cardImageWrapper}>
+                        <img
+                            alt="Swami Gnanaandha Maharaj 4"
+                            src="/gallery/swami-4.jpg"
+                        />
+                    </div>
+                    <div className={styles.cardContent}>
+                        <h3>Swami Gnanaandha Maharaj</h3>
+                    </div>
+                </a>
+
+                <a
+                    data-lg-size="1600-2400"
+                    className={styles.galleryItemCard}
+                    data-src="/gallery/swami-5.jpg"
+                    data-sub-html="<h4>Swami Gnanaandha Maharaj</h4>"
+                >
+                    <div className={styles.cardImageWrapper}>
+                        <img
+                            alt="Swami Gnanaandha Maharaj 5"
+                            src="/gallery/swami-5.jpg"
+                        />
+                    </div>
+                    <div className={styles.cardContent}>
+                        <h3>Swami Gnanaandha Maharaj</h3>
+                    </div>
+                </a>
+            </LightGallery>
         </div>
     );
 };
+
+const HeaderComponent = () => (
+    <div className={styles.header}>
+        <h1 className={styles.header__title}>Spiritual Gallery</h1>
+        <p className={styles.header__description}>
+            Experience the divine moments captured in time. A beautiful collection of Swami Gnanaandha Maharaj.
+        </p>
+    </div>
+);
 
 export default GalleryPage;
