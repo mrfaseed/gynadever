@@ -85,7 +85,7 @@ const Home = () => {
                     variants={staggerContainer}
                 >
                     {/* Card 1: About */}
-                    <Link href="/about" legacyBehavior>
+                    <Link href="/about">
                         <motion.div className={styles.card} variants={fadeInUp}>
                             <div className={styles.cardIcon}>ॐ</div>
                             <h3 className={styles.cardTitle}>Our Philosophy</h3>
@@ -96,7 +96,7 @@ const Home = () => {
                     </Link>
 
                     {/* Card 2: Temples */}
-                    <Link href="/temples" legacyBehavior>
+                    <Link href="/temples">
                         <motion.div className={styles.card} variants={fadeInUp}>
                             <div className={styles.cardIcon}>🛕</div>
                             <h3 className={styles.cardTitle}>Sacred Temples</h3>
@@ -107,7 +107,7 @@ const Home = () => {
                     </Link>
 
                     {/* Card 3: Gallery */}
-                    <Link href="/gallery" legacyBehavior>
+                    <Link href="/gallery">
                         <motion.div className={styles.card} variants={fadeInUp}>
                             <div className={styles.cardIcon}>🖼️</div>
                             <h3 className={styles.cardTitle}>Divine Gallery</h3>
