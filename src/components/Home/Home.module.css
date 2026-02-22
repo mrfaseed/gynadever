@@ -33,18 +33,19 @@
 }
 
 .heroTitle {
-    font-family: var(--font-cinzel), serif;
-    font-size: 4rem;
-    font-weight: 700;
+    font-family: "Google Sans", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 500;
     margin-bottom: 1rem;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     opacity: 0;
     animation: fadeInUp 1s ease-out forwards 0.5s;
+    letter-spacing: -2px;
 }
 
 .heroSubtitle {
-    font-family: var(--font-playfair), serif;
-    font-size: 1.5rem;
+    font-family: "Google Sans", sans-serif;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 2rem;
     max-width: 800px;
@@ -59,11 +60,11 @@
     padding: 15px 40px;
     background: linear-gradient(135deg, #f8b500 0%, #ff6f00 100%);
     color: #fff;
-    font-family: var(--font-cinzel), serif;
+    font-family: "Google Sans", sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: -1px;
     border-radius: 50px;
     text-decoration: none;
     box-shadow: 0 10px 20px rgba(248, 181, 0, 0.4);
@@ -124,6 +125,7 @@
 }
 
 .introText {
+    font-family: "Google Sans", sans-serif;
     font-size: 1.2rem;
     color: #555;
     line-height: 1.8;
@@ -194,13 +196,15 @@
 }
 
 .cardTitle {
-    font-family: var(--font-cinzel), serif;
+    font-family: "Google Sans", sans-serif;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #333;
+    font-weight: 500;
 }
 
 .cardDesc {
+    font-family: "Google Sans", sans-serif;
     font-size: 1rem;
     color: #666;
     line-height: 1.6;
@@ -219,7 +223,7 @@
     text-align: center;
     display: flex;
     align-items: center;
-    justify_content: center;
+    justify-content: center;
 
     &::before {
         content: '';
@@ -250,9 +254,21 @@
 
 .quoteAuthor {
     font-family: var(--font-cinzel), serif;
-    font-size: 1.2rem;
-    color: #f8b500;
+    font-size: 1.3rem;
     letter-spacing: 2px;
+    background: linear-gradient(90deg,
+            #aa771c 0%,
+            #bf953f 20%,
+            #fcf6ba 40%,
+            #f8b500 50%,
+            #fcf6ba 60%,
+            #bf953f 80%,
+            #aa771c 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: goldShimmer 5s linear infinite;
 }
 
 /* --- Animations --- */
@@ -275,6 +291,16 @@
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes goldShimmer {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: -200% center;
     }
 }
 

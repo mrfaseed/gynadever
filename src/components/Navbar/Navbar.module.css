@@ -24,8 +24,9 @@
 /* Logo Section */
 .logoContainer {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
     z-index: 10;
     position: absolute;
     left: 2rem;
@@ -33,9 +34,23 @@
     transform: translateY(-50%);
 }
 
-.logoText {
+.logoText1 {
     font-family: var(--font-roboto-flex), sans-serif;
     font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    /* Dark text for visibility */
+    letter-spacing: -2px;
+    background: linear-gradient(to right, #bf953f, #e0ba68, #b38728, #aa771c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Gold Gradient Text */
+}
+
+.logoText2 {
+    font-family: var(--font-roboto-flex), sans-serif;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #1a1a1a;
     /* Dark text for visibility */

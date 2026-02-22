@@ -15,7 +15,8 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
         {/* You can replace this text with an SVG or Image logo if available */}
-        <span className={styles.logoText}>Gynadever Maharaj</span>
+        <span className={styles.logoText1}>Sant Dnyaneshwar Maharaj</span>
+        <span className={styles.logoText2}>ஸ்ரீ ஞானேஸ்வர் மகாராஜ்</span>
       </div>
 
       <div className={styles.menuIcon} onClick={toggleMenu}>

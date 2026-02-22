@@ -32,7 +32,7 @@ const Home = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.5 }}
                     >
-                        Gynadever Maharaj
+                        Sant Dnyaneshwar Maharaj
                     </motion.h1>
                     <motion.p
                         className={styles.heroSubtitle}
