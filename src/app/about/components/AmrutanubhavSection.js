@@ -24,8 +24,8 @@ const AmrutanubhavSection = ({ addToRefs }) => {
                 </p>
 
                 <div className={styles.downloadSection}>
-                    <a href="https://firebasestorage.googleapis.com/v0/b/renomatedialysis.firebasestorage.app/o/%E0%AE%85%E0%AE%AE%E0%AE%BF%E0%AE%B0%E0%AF%8D%E0%AE%A4%E0%AE%A9%E0%AF%81%E0%AE%AA%E0%AE%BE%E0%AE%B5%E0%AE%AE%E0%AF%8D.pdf?alt=media&token=7b823998-ccfb-41b4-89a7-26ee87c07926" className={styles.downloadBtn} target="_blank" rel="noopener noreferrer">Download Amrutanubhav</a>
-                    <a href="#" className={styles.downloadBtn} onClick={(e) => e.preventDefault()}>Download Changdev Pasashti</a>
+                    <a href="https://firebasestorage.googleapis.com/v0/b/renomatedialysis.firebasestorage.app/o/%E0%AE%85%E0%AE%AE%E0%AE%BF%E0%AE%B0%E0%AF%8D%E0%AE%A4%E0%AE%A9%E0%AF%81%E0%AE%AA%E0%AE%BE%E0%AE%B5%E0%AE%AE%E0%AF%8D.pdf?alt=media&token=7b823998-ccfb-41b4-89a7-26ee87c07926" className={styles.downloadBtn} target="_blank" rel="noopener noreferrer">Download Amrutanubhav Tamil</a>
+                   
                 </div>
             </div>
         </section>

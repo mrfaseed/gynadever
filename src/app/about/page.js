@@ -31,6 +31,10 @@ const QuoteSection = dynamic(() => import('./components/QuoteSection'), {
     loading: () => <div className={styles.sectionLoader}><span className={styles.omSymbol}>ॐ</span> Loading Enlightenment...</div>
 });
 
+const BuddhaQuoteSection = dynamic(() => import('./components/BuddhaQuoteSection'), {
+    loading: () => <div className={styles.sectionLoader}><span className={styles.omSymbol}>ॐ</span> Loading Truth...</div>
+});
+
 export default function About() {
     const sectionRefs = useRef([]);
 
@@ -75,6 +79,7 @@ export default function About() {
             <LiteratureSection addToRefs={addToRefs} />
             <AmrutanubhavSection addToRefs={addToRefs} />
             <QuoteSection addToRefs={addToRefs} />
+            <BuddhaQuoteSection addToRefs={addToRefs} />
         </div>
     );
 }

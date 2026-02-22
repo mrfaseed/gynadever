@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-/* Main Container */
+/* Main Container - White Gold Theme */
 .container {
     min-height: 100vh;
-    background-color: #ffffff;
-    color: #1e3a8a;
+    background-color: #fafafa;
+    color: #333333;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     width: 100%;
@@ -13,7 +13,7 @@
 /* Hero Section */
 .hero {
     position: relative;
-    height: 80vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +21,7 @@
     background-size: cover;
     background-position: center;
     text-align: center;
-    color: #fff;
-    overflow: hidden;
+    color: #d4af37;
 }
 
 .heroOverlay {
@@ -31,527 +30,397 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.6), rgba(30, 58, 138, 0.9));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(250, 250, 250, 1) 90%);
 }
 
 .heroContent {
     position: relative;
     z-index: 2;
-    padding: 3rem;
-    animation: fadeInZoom 1.2s ease-out;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Ensure hero content is centered and doesn't overflow */
-    max-width: 90%;
-    margin: 0 auto;
+    padding: 4rem;
+    animation: fadeInUp 1.5s ease-out;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .title {
-    font-family: 'Google Sans', sans-serif;
-    font-size: 4rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    letter-spacing: -2px;
-    background: linear-gradient(to right, #bf953f, #e0ba68, #b38728, #c5c096, #aa771c);
+    font-family: 'Cinzel', serif;
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 4px;
+    background: linear-gradient(to right, #aa771c, #d4af37, #8a6e2f, #d4af37, #aa771c);
     background-size: 200% auto;
-    color: #000;
+    color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 10s linear infinite;
+    animation: goldShine 6s linear infinite;
+    text-transform: uppercase;
 }
 
-@keyframes shine {
+@keyframes goldShine {
     to {
         background-position: 200% center;
     }
 }
 
 .subtitle {
-    font-size: 1.5rem;
-    color: #e0f2fe;
+    font-size: 1.4rem;
+    color: #555555;
     font-weight: 300;
-    margin-top: 1rem;
-    letter-spacing: 2px;
-    font-family: 'Playfair Display', serif;
+    margin-top: 1.5rem;
+    letter-spacing: 3px;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(212, 175, 55, 0.5);
+    display: inline-block;
+    padding-top: 1rem;
 }
 
 /* Content Sections */
 .section {
-    padding: 5rem 2rem;
-    max-width: 1200px;
-    /* Standardized max-width */
+    padding: 6rem 2rem;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /* Center items flex-wise */
-    gap: 4rem;
+    gap: 5rem;
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    will-change: opacity, transform;
+    transition: all 1s ease-out;
 }
 
-/* Dedication Section */
+/* Dedication Section - Glassmorphism */
 .dedicationText {
     flex: 1;
-    min-width: 300px;
-    /* Prevent shrinking too small */
-    font-size: 1.2rem;
-    line-height: 1.8;
-    text-align: left;
-    /* Changed from justify for cleaner spacing */
-    background: #f8fafc;
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    border-left: 6px solid #3b82f6;
+    min-width: 350px;
+    font-size: 1.15rem;
+    line-height: 2;
+    text-align: justify;
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 2px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
     position: relative;
-    overflow: hidden;
+    color: #444444;
+}
+
+.dedicationText::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #d4af37, #aa771c);
 }
 
 .dedicationImage {
     flex: 1;
-    min-width: 300px;
+    min-width: 350px;
     display: flex;
     justify-content: center;
-    perspective: 1000px;
+    perspective: 1500px;
 }
 
-/* 3D Book Design - Blue Theme */
-.bookWrapper {
-    perspective: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
-}
-
+/* 3D Book Design */
 .book3D {
-    width: 280px;
-    height: 400px;
+    width: 300px;
+    height: 440px;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateY(-20deg);
-    transition: transform 0.4s ease;
-    box-shadow: 15px 20px 40px rgba(0, 20, 60, 0.2);
-    background: #0f172a;
-    border-radius: 6px 16px 16px 6px;
+    transform: rotateY(-25deg);
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 20px 30px 50px rgba(0, 0, 0, 0.15);
 }
 
 .book3D:hover {
     transform: rotateY(0deg) scale(1.02);
-    box-shadow: 10px 10px 30px rgba(0, 30, 90, 0.15);
 }
 
 .bookCoverImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0 16px 16px 0;
+    border-radius: 2px 8px 8px 2px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
-    border: 4px solid #60a5fa;
-    border-left: 8px solid #1e3a8a;
-}
-
-.book3D::before {
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: 100%;
-    width: 40px;
-    height: 96%;
-    background: repeating-linear-gradient(90deg, #fff, #f1f5f9 2px, #cbd5e1 4px);
-    transform: rotateY(90deg) translateX(-20px);
-    transform-origin: left;
-    z-index: 1;
-    border: 1px solid #94a3b8;
-}
-
-.book3D::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 100%;
-    background: linear-gradient(to right, #0f172a, #1e40af);
-    transform: rotateY(-90deg) translateX(-15px);
-    transform-origin: left;
+    border: 2px solid #8a6e2f;
 }
 
 /* Biography Section */
 .bioSection {
-    background: linear-gradient(160deg, #f0f9ff 0%, #e0f2fe 100%);
+    background: radial-gradient(circle at center, #ffffff 0%, #f7f7f7 100%);
     position: relative;
-    overflow: hidden;
-    border-radius: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    margin: 4rem auto;
-    /* Centered with margin auto */
-    width: 90%;
-    /* Responsive width */
-    max-width: 1200px;
-    /* Cap width */
-    padding: 4rem 2rem;
-    /* Adjusted padding */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center content horizontally */
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(-50vw + 50%);
+    padding: 6rem 0;
 }
 
 .sectionTitle {
     width: 100%;
     text-align: center;
     font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: #1e3a8a;
-    margin-bottom: 3rem;
+    font-size: 2.8rem;
+    color: #aa771c;
+    /* darker gold */
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
     position: relative;
-    z-index: 1;
-    line-height: 1.3;
 }
 
 .sectionTitle::after {
-    content: '';
+    content: '❖';
     display: block;
-    width: 80px;
-    height: 4px;
-    background: #3b82f6;
-    margin: 15px auto;
-    border-radius: 2px;
+    font-size: 1.5rem;
+    color: #d4af37;
+    margin-top: 1rem;
 }
 
 .bioContent {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    font-size: 1.15rem;
-    line-height: 1.8;
-    z-index: 1;
-    max-width: 900px;
-    /* Limit content width for readability */
-    margin: 0 auto;
-    width: 100%;
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
 }
 
 .infoCard {
     background: #ffffff;
-    padding: 1.5rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border-left: 5px solid #2563eb;
-    transition: transform 0.2s ease;
+    padding: 2.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
     width: 100%;
-    /* Full width of parent */
 }
 
 .infoCard:hover {
-    transform: translateY(-3px);
+    background: #fafafa;
+    border-color: rgba(212, 175, 55, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
 }
 
 .infoTitle {
-    font-weight: 700;
-    color: #2563eb;
-    margin-bottom: 0.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    color: #aa771c;
+    margin-bottom: 0.8rem;
     display: block;
-    font-size: 1.1rem;
-    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
 }
 
 /* Literature Section */
 .literatureSection {
-    background: #0f172a;
-    color: #ffffff;
-    padding: 6rem 2rem;
-    border-radius: 0;
-    /* Full width background, removed radius for variety */
-    width: 100%;
-    max-width: 100%;
-    /* Override standard section max-width */
-    margin: 0;
+    background: #ffffff;
+    padding: 8rem 0;
 }
 
 .bookContainer {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     flex-direction: row-reverse;
-    gap: 4rem;
+    gap: 6rem;
     align-items: center;
-    position: relative;
-    z-index: 2;
     padding: 0 2rem;
 }
 
-.bookImageWrapper {
-    flex: 1;
-    min-width: 300px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
 .bookTitle {
-    font-size: 2.5rem;
-    color: #bfdbfe;
-    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    color: #aa771c;
+    margin-bottom: 2rem;
     font-family: 'Cinzel', serif;
-    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .bookDesc {
     font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    color: #cbd5e1;
-    text-align: left;
+    line-height: 1.9;
+    color: #555555;
+    margin-bottom: 3rem;
 }
 
 .addressBox {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(212, 175, 55, 0.05);
+    padding: 2.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 2px;
 }
 
 .addressTitle {
+    color: #aa771c;
+    font-family: 'Cinzel', serif;
     font-size: 1.2rem;
-    font-family: "Google Sans", sans-serif;
-    color: #60a5fa;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+    letter-spacing: 2px;
 }
 
-.addressBox p {
-    font-family: "Inter Tight", sans-serif;
-    font-size: 1rem;
-    color: #cbd5e1;
-    margin-bottom: 0.5rem;
-}
-
-/* Downloads Section */
-.separatorSection {
-    border-top: none;
-    background: #ffffff;
-}
-
+/* Download Buttons */
 .downloadSection {
-    text-align: center;
-    padding: 3rem 0;
     display: flex;
+    gap: 2rem;
     justify-content: center;
-    gap: 1.5rem;
+    margin-top: 3rem;
     flex-wrap: wrap;
 }
 
 .downloadBtn {
-    font-family: "Google Sans", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: #fff;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
+    padding: 1rem 3rem;
+    background: transparent;
+    border: 1px solid #aa771c;
+    color: #aa771c;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    cursor: pointer;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.downloadBtn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-}
-
-/* Philosophy Quote Section */
-.quoteSection {
-    background-image: url('/spiritual_hero.png');
-    background-size: cover;
-    background-position: center;
-    padding: 8rem 2rem;
-    text-align: center;
     position: relative;
-    color: #fff;
     overflow: hidden;
 }
 
-.quoteOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(15, 23, 42, 1), rgba(30, 58, 138, 0.8));
-    z-index: 1;
+.downloadBtn:hover {
+    background: #aa771c;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
-.quoteContent {
+/* Quote Section */
+.quoteSection {
+    background: #fafafa;
+    padding: 10rem 2rem;
+    text-align: center;
     position: relative;
-    z-index: 2;
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 .quoteText {
-    font-size: 1.4rem;
-    font-style: italic;
-    line-height: 2;
     font-family: 'Playfair Display', serif;
-    color: #f1f5f9;
-}
-
-.quoteText p {
-    margin-bottom: 1rem;
-    opacity: 0.95;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #444444;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
 }
 
 .nirvana {
-    font-size: 3.5rem;
-    color: #ffffff;
-    margin: 3rem 0;
-    display: block;
     font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    color: transparent;
+    background: linear-gradient(to bottom, #d4af37, #aa771c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    animation: pulseGlow 3s infinite alternate;
+    letter-spacing: 8px;
+    margin-top: 2rem;
+    display: block;
+    animation: pulseGold 4s infinite alternate;
 }
 
-/* Animations */
-@keyframes fadeInZoom {
+@keyframes pulseGold {
+    from {
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+    }
+
+    to {
+        text-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+    }
+}
+
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: scale(0.95);
+        transform: translateY(40px);
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
 }
 
-@keyframes pulseGlow {
-    from {
-        text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
-    }
+/* Amrutanubhav Specifics */
+.transparentCard {
+    background: #ffffff;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 3rem;
+    color: #444444;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
 
-    to {
-        text-shadow: 0 0 20px rgba(96, 165, 250, 0.8), 0 0 40px rgba(59, 130, 246, 0.6);
-    }
+.separatorSection {
+    background: #fafafa;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    padding-top: 6rem;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .container {
-        font-size: 15px;
+    .title {
+        font-size: 2.5rem;
     }
 
     .hero {
-        height: 60vh;
-    }
-
-    .title {
-        font-size: 2.2rem;
-        line-height: 1.2;
-    }
-
-    .subtitle {
-        font-size: 1.1rem;
+        height: 70vh;
     }
 
     .section {
-        padding: 3rem 1.5rem;
-        gap: 2rem;
-        flex-direction: column;
-        width: 100%;
-        margin: 0 auto;
+        padding: 4rem 1.5rem;
+        gap: 3rem;
     }
 
-    .dedicationImage,
-    .bookImageWrapper {
-        order: -1;
-        width: 100%;
-    }
-
-    .dedicationText {
-        padding: 1.5rem;
-        border-left-width: 4px;
-        text-align: left;
-        /* Keep left align on mobile */
-    }
-
-    .book3D {
-        width: 200px;
-        height: 280px;
-        transform: rotateY(-5deg);
-        /* reduce rotation on mobile */
-    }
-
-    .book3D:hover {
-        transform: rotateY(0deg);
-    }
-
-    .bioSection {
-        width: 100%;
-        margin: 0;
-        border-radius: 0;
-        padding: 3rem 1.5rem;
-    }
-
-    .sectionTitle {
-        font-size: 1.8rem;
-    }
-
+    .dedicationText,
+    .bioSection,
     .literatureSection {
-        padding: 3rem 1.5rem;
-        border-radius: 0;
+        padding: 2rem 1.5rem;
     }
 
     .bookContainer {
         flex-direction: column;
-        gap: 2rem;
-        padding: 0;
+        gap: 3rem;
     }
 
     .bookTitle {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .bookDesc,
-    .addressBox {
+        font-size: 2rem;
         text-align: center;
     }
 
     .bookDesc {
-        text-align: left;
-        /* Better readability */
+        text-align: justify;
     }
 
-    .downloadBtn {
-        width: 100%;
-        font-size: 1rem;
+    .book3D {
+        width: 240px;
+        height: 360px;
     }
 
     .nirvana {
-        font-size: 2.2rem;
-        letter-spacing: 2px;
+        font-size: 2.5rem;
     }
 }
 
-/* Section Loader Styles - Kept for fallback, but GlobalLoader is primary */
+/* Loader Styles */
 .sectionLoader {
     display: flex;
     flex-direction: column;
@@ -559,34 +428,136 @@
     align-items: center;
     min-height: 200px;
     font-family: 'Cinzel', serif;
-    color: #94a3b8;
-    font-size: 1rem;
-    background: transparent;
-    border-radius: 12px;
-    margin: 2rem 0;
+    color: #aa771c;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
 }
 
-/* Standard iOS Spinner for Section Loader fallback if needed */
-.iosSpinner {
+.omSymbol {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: rotateSlow 10s linear infinite;
     display: inline-block;
+    color: #d4af37;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+@keyframes rotateSlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Buddha Quote Section Styles */
+.buddhaSection {
     position: relative;
-    width: 40px;
-    height: 40px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
 }
 
-.iosSpinner div {
-    transform-origin: 20px 20px;
-    animation: spinner-fade 1.2s linear infinite;
-}
-
-.iosSpinner div:after {
-    content: " ";
-    display: block;
+.buddhaBackground {
     position: absolute;
-    top: 2px;
-    left: 18px;
-    width: 3px;
-    height: 9px;
-    border-radius: 20%;
-    background: #94a3b8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0.45;
+    /* Soft light blend */
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+.buddhaBackground img {
+    height: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    mask-image: radial-gradient(circle at center, black 50%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 80%);
+}
+
+.buddhaOverlayGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 30%, #fafafa 90%);
+}
+
+/* Premium Slogam Design */
+.sloganPremiumBlock {
+    background: linear-gradient(135deg, #ffffff 0%, #fef8e6 100%);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 8px;
+    padding: 4rem 3rem;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1);
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.sloganPremiumBlock::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #d4af37, #aa771c);
+}
+
+.slogamIconWrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.omSymbolSmall {
+    font-size: 2.5rem;
+    color: #aa771c;
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.sloganPremiumText {
+    font-size: 1.15rem;
+    line-height: 2.2;
+    color: #444444;
+    text-align: justify;
+    margin-bottom: 3.5rem;
+    font-weight: 400;
+}
+
+.slogamImagesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    background: rgba(250, 250, 250, 0.8);
+    border: 1px dashed rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
+}
+
+.slogamImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 2px solid #fff;
 }
