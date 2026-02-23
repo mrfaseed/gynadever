@@ -23,7 +23,7 @@ const DedicationSection = ({ addToRefs }) => {
                 <div className={styles.bookWrapper}>
                     <div className={styles.book3D}>
                         <Image
-                            src="/sage_silhouette.png"
+                            src="/Cover.png"
                             alt="Guru Gnanananda Maharaj"
                             fill
                             className={styles.bookCoverImage}

@@ -59,7 +59,7 @@ export default function ContactPage() {
                                         <span className={styles.icon}>📍</span> Thiruvannamalai
                                     </div>
                                     <div>
-                                        <span className={styles.icon}>✉️</span> info@gynadever.org
+                                        <span className={styles.icon}>✉️</span> saintdyaneshwarmaharaj@gmail.com
                                     </div>
                                 </td>
                             </tr>

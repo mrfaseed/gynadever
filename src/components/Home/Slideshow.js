@@ -12,11 +12,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const galleryImages = [
-    '/gallery/swami-1.jpg',
-    '/gallery/swami-2.jpg',
+    '/1.jpeg',
     '/gallery/swami-3.jpg',
-    '/gallery/swami-4.jpg',
-    '/gallery/swami-5.jpg'
+    '/Tiger.jpg',
+    '/Cover.png',
 ];
 
 const Slideshow = () => {

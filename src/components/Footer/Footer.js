@@ -73,8 +73,7 @@ export default function Footer() {
                             </svg>
                         </div>
                         <div>
-                            info@gynadever.org<br />
-                            support@gynadever.org
+                            saintdyaneshwarmaharaj@gmail.com
                         </div>
                     </div>
                 </div>
