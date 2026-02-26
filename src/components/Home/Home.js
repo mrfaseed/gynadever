@@ -32,7 +32,8 @@ const Home = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.5 }}
                     >
-                        Sant Dnyaneshwar Maharaj
+                        சந்த் ஞானேஸ்வர் மகாராஜ்
+
                     </motion.h1>
                     <motion.p
                         className={styles.heroSubtitle}
@@ -40,7 +41,7 @@ const Home = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1, delay: 1 }}
                     >
-                        Embrace the eternal wisdom of Sanatana Dharma. A sanctuary for peace, devotion, and spiritual awakening.
+                        சனாதன தர்மத்தின் நித்திய ஞானத்தைத் தழுவுங்கள். அமைதி, பக்தி மற்றும் ஆன்மீக விழிப்புணர்வுக்கான சரணாலயம்.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -65,12 +66,12 @@ const Home = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     variants={fadeInUp}
                 >
-                    <h2 className={styles.sectionTitle}>A Beacon of Divine Light</h2>
+                    <h2 className={styles.sectionTitle}>தெய்வீக ஒளியின் கலங்கரை விளக்கம்</h2>
                     <p className={styles.introText}>
-                        Welcome to the spiritual abode of Swami Gnanaandha Maharaj. Our mission is to preserve the sacred traditions of our ancestors and guide seekers on the path of self-realization. Here, ancient wisdom meets modern understanding, creating a bridge to the divine.
+                        சந்த் ஞானேஸ்வர் மகாராஜின் ஆன்மீக இல்லத்திற்கு வரவேற்கிறோம். எங்கள் நோக்கம் எங்கள் மூதாதையர்களின் புனித மரபுகளைப் பாதுகாப்பதும், சுய-உணர்தலுக்கான பாதையில் தேடுபவர்களுக்கு வழிகாட்டுவதும் ஆகும். இங்கே, பண்டைய ஞானம் நவீன புரிதலுடன் இணைந்து, தெய்வீகத்திற்கான பாலத்தை உருவாக்குகிறது.
                     </p>
                     <p className={styles.introText}>
-                        Whether you seek solace in prayer, knowledge from scriptures, or the community of fellow devotees, you have found your home.
+                        நீங்கள் பிரார்த்தனையில் ஆறுதலையோ, வேதங்களிலிருந்து அறிவையோ, அல்லது சக பக்தர்களின் சமூகத்தையோ தேடினாலும், நீங்கள் உங்கள் வீட்டைக் கண்டுபிடித்துவிட்டீர்கள்.
                     </p>
                 </motion.div>
             </section>
@@ -129,9 +130,9 @@ const Home = () => {
                     viewport={{ once: true }}
                 >
                     <p className={styles.quoteText}>
-                        "The soul that realizes the divine within sees the divine in all. Service to humanity is service to God."
+                        "உள்ளே உள்ள தெய்வீகத்தை உணரும் ஆன்மா எல்லாவற்றிலும் தெய்வீகத்தைக் காண்கிறது. மனித குலத்திற்கான சேவை என்பது கடவுளுக்குச் செய்யும் சேவையாகும்."
                     </p>
-                    <span className={styles.quoteAuthor}>— Swami Gnanaandha Maharaj</span>
+                    <span className={styles.quoteAuthor}>— சந்த் ஞானேஸ்வர் மகாராஜ்</span>
                 </motion.div>
             </section>
         </div>

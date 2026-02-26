@@ -46,10 +46,8 @@ export default function Footer() {
                             </svg>
                         </div>
                         <div>
-                            <strong>SRI RAMANAM BANK</strong><br />
-                            Ramamanthiram, #2, Vinayagam St,<br />
-                            Perambur, Vivekanandapuram,<br />
-                            West Mambalam, Chennai - 600033
+                            <strong>SRI DYANESHWAR <br />MAHARJ SAMASTHANAM</strong><br />
+                            Thiruvannamalai, <br />Tamil Nadu, India
                         </div>
                     </div>
 

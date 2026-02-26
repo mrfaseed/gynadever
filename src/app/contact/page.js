@@ -31,7 +31,7 @@ export default function ContactPage() {
 
             <div className={styles.grid}>
                 <div className={styles.card}>
-                    <h2 className={styles.subtitle}>Sri Gnaneswara Maharaj Samasthanam</h2>
+                    <h2 className={styles.subtitle}>Sri Gnaneswar Maharaj Samasthanam</h2>
                     <p className={styles.subText}>
                         <span className={styles.tamilText}>ஸ்ரீ ஞானேஸ்வர் மகாராஜ் சமஸ்தானம்</span>
                     </p>
