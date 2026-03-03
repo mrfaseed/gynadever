@@ -5,7 +5,7 @@ import styles from './gallery.module.css';
 
 const images = [
     { id: 1, src: '/Coin.jpeg', alt: 'Sacred Coin', caption: 'Sacred Coin', size: 'tall' },
-    { id: 2, src: '/1.jpeg', alt: 'Divine Blessings', caption: 'Divine Blessings', size: 'wide' },
+    { id: 2, src: '/gallery/Dyaneshwar.jpeg', alt: 'Sant Dnyaneshwar Maharaj', caption: 'Sant Dnyaneshwar Maharaj', size: 'wide' },
     { id: 3, src: '/gallery/swami-3.jpg', alt: 'Swami Gnanaandha Maharaj', caption: 'Spiritual Grace', size: 'normal' },
     { id: 4, src: '/Tiger.jpg', alt: 'Tiger', caption: 'Changdev meets Dnyaneshwar', size: 'wide' },
     { id: 5, src: '/jpeg', alt: 'Divine Image', caption: 'Divine Presence', size: 'normal' },

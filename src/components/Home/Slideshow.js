@@ -12,7 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const galleryImages = [
-    '/1.jpeg',
+    '/gallery/Dyaneshwar.jpeg',
     '/gallery/swami-3.jpg',
     '/Tiger.jpg',
     '/Cover.png',

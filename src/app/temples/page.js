@@ -6,19 +6,19 @@ import styles from './temples.module.css';
 const temples = [
     {
         id: 1,
-        name: "Alandi - Sanjeevan Samadhi",
-        location: "Pune, Maharashtra",
+        name: "ஆலந்தி - சஞ்சீவன் சமாதி",
+        location: "புனே, மகாராஷ்டிரா",
         description: (
             <>
                 <p>
-                    <span className={styles.highlight}>Alandi</span> is the sacred place where
-                    Sant Dnyaneshwar Maharaj took <span className={styles.highlight}>Sanjeevan Samadhi</span> alive in 1296 CE.
-                    It is believed he is still alive in the Samadhi, radiating spiritual energy.
+                    <span className={styles.highlight}>ஆலந்தி</span> என்பது
+                    சந்த் ஞானேஸ்வர் மகாராஜ் கி.பி. 1296 இல் உயிருடன் <span className={styles.highlight}>சஞ்சீவன் சமாதி</span> அடைந்த புனிதமான இடமாகும்.
+                    அவர் இன்னும் சமாதியில் உயிருடன் இருந்து ஆன்மீக ஆற்றலை வெளிப்படுத்துகிறார் என்று நம்பப்படுகிறது.
                 </p>
                 <br />
                 <p>
-                    Devotees visit to experience divine peace, especially during the
-                    <span className={styles.highlight}> Kartiki Ekadashi</span> festival.
+                    பக்தர்கள் தெய்வீக அமைதியை உணர இங்கு வருகிறார்கள், குறிப்பாக
+                    <span className={styles.highlight}> கார்த்திகி ஏகாதசி</span> திருவிழாவின் போது.
                 </p>
             </>
         ),
@@ -26,18 +26,18 @@ const temples = [
     },
     {
         id: 2,
-        name: "Paithan - Birthplace",
-        location: "Aurangabad, Maharashtra",
+        name: "பைதான் - பிறந்த இடம்",
+        location: "ஔரங்காபாத், மகாராஷ்டிரா",
         description: (
             <>
                 <p>
-                    <span className={styles.highlight}>Paithan</span>, situated on the banks of
-                    river Godavari, is his ancestral home.
+                    <span className={styles.highlight}>பைதான்</span>, கோதாவரி நதிக்கரையில் அமைந்துள்ள
+                    இந்த இடம் அவரது பூர்வீக வீடாகும்.
                 </p>
                 <br />
                 <p>
-                    It witnessed the early struggles and miracles of the saint's life. The nearby
-                    <span className={styles.highlight}> Jayakwadi Dam</span> and Garden make it a serene destination.
+                    இந்த புனித இடம் அவருடைய ஆரம்பகால போராட்டங்களுக்கும் அற்புதங்களுக்கும் சாட்சியாக நின்றது.
+                    அருகிலுள்ள <span className={styles.highlight}> ஜாயக்வாடி அணை</span> மற்றும் பூந்தோட்டம் இதை அமைதியான பயணத் தலமாக்குகின்றன.
                 </p>
             </>
         ),
@@ -45,22 +45,22 @@ const temples = [
     },
     {
         id: 3,
-        name: "Nevasa - Dnyaneshwari composed",
-        location: "Ahmednagar, Maharashtra",
+        name: "நேவாசா - ஞானேஸ்வரி இயற்றப்பட்ட இடம்",
+        location: "அகமதுநகர், மகாராஷ்டிரா",
         description: (
             <>
                 <p>
-                    <span className={styles.highlight}>Nevasa</span> is where he composed
-                    the magnum opus <span className={styles.highlight}>Dnyaneshwari</span>.
+                    <span className={styles.highlight}>நேவாசா</span> என்பது அவர்
+                    தனது மகத்தான படைப்பான <span className={styles.highlight}>ஞானேஸ்வரி</span>-ஐ இயற்றிய இடமாகும்.
                 </p>
                 <br />
                 <p>
-                    The temple has a pillar against which he leaned while dictating the verses, marking the
-                    birth of Marathi literature.
+                    இந்தக் கோவிலில் ஒரு தூண் உள்ளது — அவர் வசனங்களை சொல்லிக் கொடுக்கும்போது சாய்ந்து நின்ற தூண் —
+                    மராத்தி இலக்கியத்தின் பிறப்பிடத்தை குறிக்கிறது.
                 </p>
             </>
         ),
-        image: "/ancient_book.png" // Appropriate context
+        image: "/ancient_book.png"
     }
 ];
 
@@ -86,9 +86,9 @@ export default function Temples() {
 
             <div className={styles.hero}>
                 <div className={styles.heroContent}>
-                    <h1 className={styles.title}>Sacred Temples</h1>
+                    <h1 className={styles.title}>புனித கோவில்கள்</h1>
                     <p className={styles.subtitle}>
-                        Discover the holy places associated with the life and legacy of Sant Dnyaneshwar Maharaj.
+                        சந்த் ஞானேஸ்வர் மகாராஜின் வாழ்க்கை மற்றும் பரம்பரையுடன் தொடர்புடைய புனிதமான இடங்களைக் கண்டறியுங்கள்.
                     </p>
                 </div>
             </div>
@@ -120,3 +120,4 @@ export default function Temples() {
         </div>
     );
 }
+
