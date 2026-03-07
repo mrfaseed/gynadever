@@ -34,8 +34,8 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata = {
-  title: "Hinduism Organization",
-  description: "Dedicated to the preservation and promotion of Sanatana Dharma",
+  title: "Sant Dyaneshwar Maharaj",
+  description: "Dedicated to the preservation and Bio of Sant Dyaneshwar Maharaj",
 };
 
 export default function RootLayout({ children }) {
